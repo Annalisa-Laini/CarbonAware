@@ -26,14 +26,15 @@ pip install -r requirements.txt
 7. geolocation_pop.json - list on PoP that will populate the graphs and create the topology
 
 ## Calculate the paths' emissions
-For each target timestamp run first pickle_graph_creator.py, and then pickle_graph_hourly_creator.py to create pkl files with all the necessary graphs, data and paths. 
-The script process_emission_paths.py computes, for the chosen range of dates and hours, the Lowest-Emissions paths (emissions=True) (or Shortest Path paths (emissions=False)) for each sampled source-target AS pair of a chosen path length (from pop_10k_sample.csv*), using the hourly graph pickles built in the previous step. The scirpts sums per-edge emissions along each path and incrementally appends results to a resumable CSV.
+For each target timestamp run first **pickle_graph_creator.py**, and then **pickle_graph_hourly_creator.py** to create pkl files with all the necessary graphs, data and paths. 
+
+The script **process_emission_paths.py** computes, for the chosen range of dates and hours, the Lowest-Emissions paths (emissions=True) (or Shortest Path paths (emissions=False)) for each sampled source-target AS pair of a chosen path length (from _pop_10k_sample.csv_*), using the hourly graph pickles built in the previous step. The scirpts sums per-edge emissions along each path and incrementally appends results to a resumable CSV.
 
 *use:
-- pop_10k_sample.csv for the original 10k sample
-- pop_10k_sample_novalidity.csv for the 10k sample without validity constraints (in this particular case, use_pickle_graphs.py should use function find_path)
-- pop_1k_sample.csv as the 1k EUROPE SAMPLE (also change countries.txt to countriesEU.txt)
-- pop_3k_sample.csv for the 1000 couples of len 4,5,6
+- _pop_10k_sample.csv_ for the original 10k sample
+- _pop_10k_sample_novalidity.csv_ for the 10k sample without validity constraints (in this particular case, use_pickle_graphs.py should use function find_path)
+- _pop_1k_sample.csv_ as the 1k EUROPE SAMPLE (also change countries.txt to countriesEU.txt)
+- _pop_3k_sample.csv_ for the 1000 couples of len 4,5,6
 
 
 
