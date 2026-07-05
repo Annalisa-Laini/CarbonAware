@@ -32,7 +32,7 @@ pip install -r requirements.txt
 ### Calculate the paths' emissions
 For each target timestamp run first **pickle_graph_creator.py**, and then **pickle_graph_hourly_creator.py** to create pkl files with all the necessary graphs, data and paths. 
 
-The script **process_emission_paths.py** computes, for the chosen range of dates and hours, the Lowest-Emissions paths (emissions=True) (or Shortest Path paths (emissions=False)) for each sampled source-target AS pair of a chosen path length (from _pop_10k_sample.csv_*), using the hourly graph pickles built in the previous step. The scirpts sums per-edge emissions along each path and incrementally appends results to a resumable CSV.
+The script **process_emission_paths.py** computes, for the chosen range of dates and hours, the Lowest-Emissions paths (emissions=True) (or Shortest Path paths (emissions=False)) for each sampled source-target AS pair of a chosen path length (from _pop_10k_sample.csv_*), using the hourly graph pickles built in the previous step. The scripts sum per-edge emissions along each path and incrementally appends results to a resumable CSV, which can be further explored and plotted by running **boxplots.py**
 
 *use:
 - _pop_10k_sample.csv_ for the original 10k sample
