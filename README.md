@@ -11,7 +11,7 @@ A carbon-aware, valley-free routing simulator for Autonomous System networks. Th
 ## Energy Graphs
 Running **main.py** lets you generate carbon-intensity trend plots by selecting a granularity ("seasonal" or "monthly") and whether the y-axis should be scaled (True) or not (False); the plot_function_map dispatches the chosen combination to the corresponding plotting function in plotter (plot_seasonal_scaled, plot_seasonal_not_scaled, plot_monthly_scaled, plot_monthly_not_scaled).
 
-## Toplogy Map
+## Topology Map
 ### Installation
 
 ```bash
