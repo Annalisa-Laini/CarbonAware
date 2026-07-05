@@ -28,4 +28,4 @@ for code, details in api_zones.items():
 with open("updated_iso_mapping_from_api.json", "w") as f:
     json.dump({"regions": updated_mapping}, f, indent=2)
 
-print(f"[✓] Generated mapping with {len(updated_mapping)} region codes.")
+print(f"Generated mapping with {len(updated_mapping)} region codes.")

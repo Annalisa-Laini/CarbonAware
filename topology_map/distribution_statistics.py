@@ -3,31 +3,25 @@ from pathlib import Path
 import pandas as pd
 import numpy as np
 
-# ========= CONFIG =========
 BASE_DIR = Path(r"data\test")  # folder containing the CSVs
 ALGOS    = ["LE", "SP"]
 SIZES    = ["50k", "100k", "250k", "500k"]
 FNAME    = "sampled_path_lengths_{ALG}_{SIZE}_pops_w.csv"  # rest of name stays the same
 SUMMARY_OUT = BASE_DIR / "summary_stats_all.csv"
-# ==========================
 
 def process_one(csv_path: Path):
-    # Load exactly like your script
     df = pd.read_csv(csv_path, header=None,
                      names=["Node1", "Node2", "PathLength"],
                      dtype=str)
-    # Clean + numeric conversion
     df["PathLength"] = pd.to_numeric(df["PathLength"], errors="coerce")
     df = df.dropna(subset=["PathLength"])
     df["PathLength"] = df["PathLength"].astype(int)
 
-    # Summary stats
     mean_path_length   = df["PathLength"].mean()
     median_path_length = df["PathLength"].median()
     max_path_length    = df["PathLength"].max()
     percentile_90      = float(np.percentile(df["PathLength"], 90))
 
-    # Density distribution
     counts  = df["PathLength"].value_counts().sort_index()
     density = counts / counts.sum()
 

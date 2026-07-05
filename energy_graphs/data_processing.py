@@ -53,9 +53,6 @@ class DataProcessor:
         self.data = self.data[['country', 'month', 'season', 'hour', 'carbon intensity', 'renewable percentage']]
 
         return self.data
-
-        
-        
     
     @staticmethod
     def assign_season(month):

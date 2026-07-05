@@ -2,14 +2,11 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-from scipy.ndimage import uniform_filter1d  # Moving average
+from scipy.ndimage import uniform_filter1d  
 
-# Define paths
 data_folder = r"data\data\shortest seasonal paths"
 output_folder = r"topology_map\plots\emissions_scatter"
-os.makedirs(output_folder, exist_ok=True)  # Ensure the folder exists
-
-# Define target dates and hours
+os.makedirs(output_folder, exist_ok=True) 
 dates = ["Jan_17", "Apr_18", "Jul_19", "Oct_19"]
 hours = ["00", "06", "12", "18"]
 
@@ -88,11 +85,9 @@ for i, date in enumerate(dates):
         ax.set_ylabel("Emissions")
         ax.set_title(f"{date.replace('_', ' ')} - {hour}:00")
 
-# Add legend outside the plot
 handles, labels = ax.get_legend_handles_labels()
 fig.legend(handles, labels, loc="upper left", bbox_to_anchor=(1.05, 1), fontsize=12)
 
-# Save the figure
 plot_filename = os.path.join(output_folder, "emissions_scatter_trend_sampled.png")
 plt.savefig(plot_filename, dpi=300, bbox_inches="tight")
 plt.close()

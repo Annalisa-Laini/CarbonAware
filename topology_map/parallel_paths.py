@@ -1,5 +1,3 @@
-import sys
-#sys.path.append("/mnt/ric_dais_nfs_maccari/annalisa/config")
 import os
 import csv
 import pickle
@@ -11,9 +9,6 @@ import numpy as np
 from tqdm import tqdm
 from concurrent.futures import ProcessPoolExecutor
 
-# ======================
-# Config (edit these)
-# ======================
 POPS_PKL      = r"data\data\pickle_graphs\pop_edge_2023-03-10.pkl"
 GRAPH_TS_KEY  = "2023-03-10 12:00:00"
 PFX2AS_FILE   = r"topology_map\data\routeviews-rv2-20240101-1200.pfx2as"
@@ -29,9 +24,6 @@ OUTPUT_FILE       = ("sampled_path_lengths_LE_250k_pops_w_novalidity2.csv" if US
                      else "sampled_path_lengths_LE_500k_pops_nw.csv")
 SEEN_SAMPLES_FILE = ("seen_samples_pops_w_ids2.pkl" if USE_WEIGHTED else "seen_samples_pops_nw_ids.pkl")
 
-# ======================
-# Helpers
-# ======================
 _ASN_RE = re.compile(r"\d+")
 
 def open_maybe_compressed(path: str):
@@ -94,28 +86,22 @@ def count_csv_rows(path):
     if not os.path.exists(path):
         return 0
     with open(path, newline="") as f:
-        return max(0, sum(1 for _ in f) - 1)  # exclude header
-
-# pack pair (u_id, v_id) into one 64-bit int (ordered)
+        return max(0, sum(1 for _ in f) - 1)  
+    
 def pack_pair(uid: int, vid: int) -> int:
     return (uid << 32) | (vid & 0xFFFFFFFF)
 
-# ======================
-# Load graph (parent) + build weights
-# ======================
 with open(POPS_PKL, "rb") as f:
     hourly_graphs = pickle.load(f)
 graph = pickle.loads(hourly_graphs[GRAPH_TS_KEY])
-graph_bytes = pickle.dumps(graph, protocol=pickle.HIGHEST_PROTOCOL)  # pass to workers once
+graph_bytes = pickle.dumps(graph, protocol=pickle.HIGHEST_PROTOCOL) 
 
-# IPv4 weights (NO PoP split: same as your code)
 as_ipv4_counts = parse_pfx2as_ipv4_counts(PFX2AS_FILE)
 if not as_ipv4_counts or sum(as_ipv4_counts.values()) == 0:
     raise SystemExit("Parsed zero IPv4 addresses. Check path/format/compression.")
 total_ipv4 = sum(as_ipv4_counts.values())
 as_ipv4_fraction = {asn: v / total_ipv4 for asn, v in as_ipv4_counts.items() if v > 0}
 
-# Build ID universe (faster dedup + vectorized sampling)
 all_nodes = list(graph.graph.nodes)
 node2id = {}
 id2node = []
@@ -139,13 +125,10 @@ if not id2node:
 N = len(id2node)
 if USE_WEIGHTED:
     weights_np = np.array(weights, dtype=np.float64)
-    weights_np /= weights_np.sum()  # normalize for numpy choice
+    weights_np /= weights_np.sum() 
 else:
     weights_np = None
 
-# ======================
-# Worker bits (reuse one executor)
-# ======================
 _GRAPH = None
 def _init_worker(graph_bytes_param: bytes):
     global _GRAPH
@@ -159,20 +142,16 @@ def compute_path_length(pair):
         if path:
             return (src, dst, len(path) - 1)
     except Exception as e:
-        # optional: print(f"Error on {src}->{dst}: {e}")
+
         pass
     return None
 
-# ======================
-# Main (same semantics)
-# ======================
 if __name__ == '__main__':
     rng = np.random.default_rng(42)
 
     output_file = OUTPUT_FILE
     seen_samples_file = SEEN_SAMPLES_FILE
 
-    # --- seen set (packed ids for speed) ---
     seen: set[int] = set()
     loaded_from_pkl = False
     if os.path.exists(seen_samples_file):
@@ -180,9 +159,9 @@ if __name__ == '__main__':
             with open(seen_samples_file, "rb") as sf:
                 obj = pickle.load(sf)
             if isinstance(obj, set) and (len(obj) == 0 or isinstance(next(iter(obj)), int)):
-                seen = obj  # already packed ints
+                seen = obj 
             elif isinstance(obj, set) and (len(obj) == 0 or isinstance(next(iter(obj)), tuple)):
-                # backward compat: tuples of labels -> convert
+                
                 for u, v in obj:
                     if u in node2id and v in node2id:
                         seen.add(pack_pair(node2id[u], node2id[v]))
@@ -191,19 +170,15 @@ if __name__ == '__main__':
         except Exception as e:
             print(f"Warning: failed to load {seen_samples_file} ({e}); starting fresh.")
 
-    # (Optional) reconstruct from CSV — omitted for speed; add if you need it.
-
-    # --- prepare CSV ---
     csv_count = count_csv_rows(output_file)
     if not os.path.exists(output_file) or csv_count == 0:
         with open(output_file, "w", newline="") as f:
             csv.writer(f).writerow(["source_as", "target_as", "path_length"])
         csv_count = 0
 
-    total_samples = max(csv_count, len(seen))  # keep “attempts” semantics
+    total_samples = max(csv_count, len(seen)) 
     print(f"Resuming from {total_samples} attempts…  Nodes={N}  Workers={MAX_WORKERS}")
 
-    # ---- One executor reused across batches
     with ProcessPoolExecutor(
         max_workers=MAX_WORKERS,
         initializer=_init_worker,
@@ -212,12 +187,10 @@ if __name__ == '__main__':
 
         try:
             while total_samples < TARGET_SAMPLE_COUNT:
-                # -------- fast vectorized pair generation (ids) --------
                 batch_ids = []
                 while len(batch_ids) < BATCH_SIZE:
                     M = max(BATCH_SIZE - len(batch_ids), 1) * CAND_MULTIPLIER
                     if USE_WEIGHTED:
-                        # draw from the valid subset via index array
                         idx = np.arange(N)
                         u_ids = rng.choice(idx, size=M, replace=True, p=weights_np)
                         v_ids = rng.choice(idx, size=M, replace=True, p=weights_np)
@@ -228,7 +201,7 @@ if __name__ == '__main__':
                         ui = int(ui); vi = int(vi)
                         if ui == vi:
                             continue
-                        packed = pack_pair(ui, vi)  # ordered; change to sorted if undirected symmetry
+                        packed = pack_pair(ui, vi) 
                         if packed in seen:
                             continue
                         seen.add(packed)
@@ -236,10 +209,8 @@ if __name__ == '__main__':
                         if len(batch_ids) >= BATCH_SIZE:
                             break
 
-                # convert ids -> labels once here
                 batch = [(id2node[ui], id2node[vi]) for ui, vi in batch_ids]
 
-                # -------- parallel compute (single executor) --------
                 results = []
                 for r in tqdm(ex.map(compute_path_length, batch, chunksize=MAP_CHUNKSZ),
                               total=len(batch),
@@ -247,16 +218,13 @@ if __name__ == '__main__':
                     if r is not None:
                         results.append(r)
 
-                # --- Save successes (same as before)
                 if results:
                     with open(output_file, "a", newline="") as f:
                         csv.writer(f).writerows(results)
 
-                # --- persist seen
                 with open(seen_samples_file, "wb") as sf:
                     pickle.dump(seen, sf, protocol=pickle.HIGHEST_PROTOCOL)
 
-                # --- attempts counter (unchanged semantics)
                 total_samples += len(batch)
                 print(f"Completed {total_samples}/{TARGET_SAMPLE_COUNT} attempts.")
 

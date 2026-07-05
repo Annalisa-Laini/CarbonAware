@@ -1,11 +1,8 @@
-# plotting.py
-
 import pandas as pd
 import matplotlib.pyplot as plt
 
 class Plotter:
     def __init__(self, data, plot_type="seasonal", scale=False):
-        """ Initialize the Plotter with data, plot type, and scale option. """
         self.data = data
         self.plot_type = plot_type
         self.scale = scale
@@ -194,11 +191,8 @@ class Plotter:
             fig.delaxes(axes[j])
 
         # Save and show the plot
-        #plt.savefig(r'energy_graphs\plots\monthly_CI_trends_scaled.png', format='png', dpi=300)
-        plt.savefig(r'energy_graphs\plots\test.png', format='png', dpi=300)
-        
-
-
+        plt.savefig(r'energy_graphs\plots\monthly_CI_trends_scaled.png', format='png', dpi=300)
+    
     def plot_monthly_not_scaled(self):
             """Plot the monthly carbon intensity for each country."""
             month_names = {

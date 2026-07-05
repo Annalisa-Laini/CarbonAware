@@ -10,7 +10,7 @@ virtual_pops = []
 
 for asn, regions in as_pops.items():
     for region_code, data in regions.items():
-        country, region = region_code.split("-", 1)  # Split "DE-NW" → "DE", "NW"
+        country, region = region_code.split("-", 1) 
         virtual_pops.append({
             "pop": f"{asn}-{region_code}",
             "as_number":asn,
@@ -23,4 +23,4 @@ for asn, regions in as_pops.items():
 with open(OUTPUT_FILE, "w") as out:
     json.dump(virtual_pops, out, indent=2)
 
-print(f"[✓] Saved {len(virtual_pops)} virtual PoPs to {OUTPUT_FILE}")
+print(f"Saved {len(virtual_pops)} virtual PoPs to {OUTPUT_FILE}")

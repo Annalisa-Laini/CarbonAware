@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.interpolate import make_interp_spline
 
-# Load and clean data
 df = pd.read_csv(r"data\server\sampled_path_lengths_SP_250k_pops_w_novalidity.csv", header=None, names=["Node1", "Node2", "PathLength"], low_memory=False)
 df["PathLength"] = pd.to_numeric(df["PathLength"], errors="coerce")
 df = df.dropna(subset=["PathLength"])
@@ -11,17 +10,13 @@ df["PathLength"] = df["PathLength"].astype(int)
 print(f"Number of rows in df: {len(df)}")
 
 
-# Calculate counts per integer PathLength
 counts = df["PathLength"].value_counts().sort_index()
 x = counts.index.values
 y = counts.values
-
-# Normalize to density (area under bars = 1)
 density = y / y.sum()
 
 plt.figure(figsize=(10, 6))
 
-# Bars with width 1, no gaps
 plt.bar(x, density, width=1.0, color="skyblue", edgecolor="black", align='center')
 for xi, di in zip(x, density):
     plt.text(xi, di + 0.01, f"{di:.3f}", ha='center', va='bottom', fontsize=14, rotation=0)

@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.basemap import Basemap
 import networkx as nx
 
-# === Config ===
 TOP_K = 100
 LENGTHS = [1, 2, 3, 4, 5, 6]
 TARGET_DATETIME = pd.to_datetime("2023-07-10 12:00:00")
@@ -13,7 +12,7 @@ TARGET_DATETIME = pd.to_datetime("2023-07-10 12:00:00")
 geo_json_path = r"data\data\geolocation_data_global.json"
 output_path = r"topology_map\plots\geo_paths_per_length\combined_top_100_paths_all_lengths.png"
 
-# === Load geolocation info ===
+
 with open(geo_json_path, "r") as f:
     geo_data = json.load(f)
 
@@ -23,7 +22,6 @@ as_to_coords = {
     if "lat" in entry and "lon" in entry
 }
 
-# === Load emissions CSVs and compute savings ===
 def load_emissions(length):
     base = r"data\data\data 4 path plot\CSV"
     sp = pd.read_csv(f"{base}/global_newSP_jul-dec_len{length}.csv", dayfirst=True)
@@ -43,7 +41,6 @@ def load_emissions(length):
 
     return df
 
-# === Build unified graph ===
 G = nx.DiGraph()
 
 for length in LENGTHS:
@@ -70,9 +67,8 @@ for length in LENGTHS:
             except Exception as e:
                 print(f"⚠️ Error parsing path: {row[path_col]} | {e}")
 
-print(f"📊 Final unified graph: {len(G.nodes())} nodes, {len(G.edges())} edges")
+print(f"Final unified graph: {len(G.nodes())} nodes, {len(G.edges())} edges")
 
-# === Plot the combined map ===
 fig = plt.figure(figsize=(20, 10))
 m = Basemap(projection='robin', lon_0=0, resolution='c')
 
@@ -100,5 +96,3 @@ plt.title("Top 100 Emission Saving Paths Across All Lengths (SP=Red, LE=Green)",
 plt.tight_layout()
 plt.savefig(output_path, dpi=300)
 plt.close()
-
-print(f"✅ Saved final combined plot to:\n{output_path}")

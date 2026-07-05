@@ -310,16 +310,15 @@ class ASGraph:
             k0, k1, k2, _, u, phase, last_rel = heapq.heappop(heap)
             state_key = (u, phase, last_rel)
             hops, wsum, emis = best_state[state_key]
-            # stale check via recompute key
+            
             if (k0, k1, k2) != make_key(hops, wsum, emis):
                 continue
 
-            # finalize best for graph-node u (first time we pop a state whose key beats per-node key)
+            
             key = (k0, k1, k2)
             if (u not in best_per_node) or (key < best_per_node[u]):
                 best_per_node[u] = key
 
-            # optional early stop for single-target queries
             if remaining_targets:
                 if u in remaining_targets:
                     remaining_targets.remove(u)

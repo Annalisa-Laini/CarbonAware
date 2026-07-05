@@ -41,7 +41,6 @@ def build_emissions_shelve(emissions_csv: str, shelf_path: str):
 
 def stream_compare_to_csv(hops_csv: str, shelf_path: str, out_csv: str):
     """Stream the hops-based CSV, compare against shelved emissions data, append diffs to out_csv."""
-    # Prepare writer in append mode; write header once if file doesn't exist
     write_header = not os.path.exists(out_csv)
     out_fh = open(out_csv, 'a', newline='', encoding='utf-8')
     writer = csv.DictWriter(out_fh, fieldnames=[
@@ -87,12 +86,11 @@ def stream_compare_to_csv(hops_csv: str, shelf_path: str, out_csv: str):
 
 def compare_two_csvs_streaming(file_emissions: str, file_hops: str, out_csv: str):
     """Orchestrates on-disk index + streaming comparison to write differences to CSV."""
-    # Temporary shelve path (folder will be cleaned by OS after reboot; files small-ish)
     with tempfile.TemporaryDirectory() as tmpdir:
         shelf_path = os.path.join(tmpdir, "emissions_index")
-        # 1) Build on-disk index for emissions file
+        
         build_emissions_shelve(file_emissions, shelf_path)
-        # 2) Stream hops file and append diffs to output CSV
+        
         stream_compare_to_csv(file_hops, shelf_path, out_csv)
 
 def batch_compare_streaming(folder_emissions: str, folder_hops: str, output_folder: str):

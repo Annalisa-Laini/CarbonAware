@@ -28,12 +28,10 @@ with open(input_file, "r", encoding="utf-8") as f:
             continue
 
         if i % batch_size == 0:
-            print(f"✅ Processed {i} lines... Saving batch to disk.")
+            print(f"Processed {i} lines... Saving batch to disk.")
             with open(output_file, "w", encoding="utf-8") as fout:
                 json.dump(as_to_locations, fout, indent=2)
 
-# Final save in case the last batch is smaller than batch_size
 with open(output_file, "w", encoding="utf-8") as fout:
     json.dump(as_to_locations, fout, indent=2)
 
-print(f"✅ Done! Final output saved to {output_file}")

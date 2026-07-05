@@ -3,13 +3,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Define paths
 #data_folder = r"data\data\shortest seasonal paths\diffs"
 data_folder = r"data\data\sampled\lowest_emissions_distribution_diffs_sample.csv"
 output_folder = r"topology_map\plots\distribution_plots"
-os.makedirs(output_folder, exist_ok=True)  # Ensure the folder exists
-
-# Define target dates and hours
+os.makedirs(output_folder, exist_ok=True)  
 dates = ["Jan_17", "Apr_18", "Jul_19", "Oct_19"]
 hours = ["00", "06", "12", "18"]
 

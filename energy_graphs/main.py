@@ -23,7 +23,6 @@ def load_and_process_data(file_path, scale):
     data = data_loader.load_data()
     data_processor = DataProcessor(data, scale=scale)
     return data_processor.process_data()
-    
 
 def main():
     # Get user inputs
@@ -41,15 +40,13 @@ def main():
     processed_data = load_and_process_data(file_path, scale)
     
     # Load and process the data
-    #EU_COUNTRIES = [
-    #    'Austria', 'Belgium', 'Bulgaria', 'Croatia', 'Cyprus', 'Czechia',
-    #    'Denmark', 'Estonia', 'Finland', 'France', 'Germany', 'Greece', 'Hungary',
-    #        'Ireland', 'Italy', 'Latvia', 'Lithuania', 'Luxembourg', 'Malta',
-    #        'Netherlands', 'Poland', 'Portugal', 'Romania', 'Slovakia', 'Slovenia',
-    #        'Spain', 'Sweden'
-    #    ]
     EU_COUNTRIES = [
-         'Poland', 'Portugal'    ]
+        'Austria', 'Belgium', 'Bulgaria', 'Croatia', 'Cyprus', 'Czechia',
+        'Denmark', 'Estonia', 'Finland', 'France', 'Germany', 'Greece', 'Hungary',
+            'Ireland', 'Italy', 'Latvia', 'Lithuania', 'Luxembourg', 'Malta',
+            'Netherlands', 'Poland', 'Portugal', 'Romania', 'Slovakia', 'Slovenia',
+            'Spain', 'Sweden'
+        ]
 
     processed_data = processed_data[processed_data['country'].isin(EU_COUNTRIES)]
 
