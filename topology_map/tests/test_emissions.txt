@@ -1,0 +1,184 @@
+'''
+This is to test whether emissions are assigned correctly and whether we have infinite emissions for any country.
+'''
+import sys
+import os
+import json
+import unittest
+
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.insert(0, project_root)
+
+from topology_map.networkx_graph import ASGraph
+
+
+class TestASGraphEmissions(unittest.TestCase):
+
+    def setUp(self):
+        self.emissions_path = r"C:\Users\annal\Documents\GitHub\Tesi\energy_graphs\data"
+        self.iso_mapping_path = r"C:\Users\annal\Documents\GitHub\Tesi\topology_map\data\iso_mapping.json"
+
+        self.graph = ASGraph(
+            data_file=r"C:\Users\annal\Desktop\Tesi\data\geolocation_data_global.json",
+            relationships_file=r"C:\Users\annal\Desktop\Tesi\topology_data\20240101.as-rel2.txt",
+            countries=["Italy"],
+            iso_mapping_file=self.iso_mapping_path,
+            load_data=False,
+            emissions_folder_path=self.emissions_path
+        )
+
+        self.iso_code = "IT"
+        self.node_id = 12345
+        self.graph.graph.add_node(self.node_id, iso=self.iso_code)
+        self.graph.as_to_iso_code[self.node_id] = self.iso_code
+        # Real ASes from geolocation JSON
+        with open(r"C:\Users\annal\Desktop\Tesi\data\geolocation_data_global.json", "r", encoding="utf-8") as f:
+            geo_data = json.load(f)
+
+        self.italy_ases = set()
+        #  extracts real ASes for check
+        for entry in geo_data:
+            if entry.get("country") == "Italy":
+                asn_str = entry.get("as_number")
+                if asn_str and asn_str.isdigit():
+                    asn = int(asn_str)
+                    if asn not in self.italy_ases:
+                        self.italy_ases.add(asn)
+                        self.graph.graph.add_node(asn, iso="IT")
+                        self.graph.as_to_iso_code[asn] = "IT"
+                if len(self.italy_ases) >= 3:
+                    break
+
+    def test_emissions_real_ases(self):
+        self.graph.add_emission_data("2023-05-01 12:00:00")
+        for asn in self.italy_ases:
+            self.assertIn('emissions', self.graph.graph.nodes[asn], f"AS{asn} should have emissions set")
+            self.assertNotEqual(self.graph.graph.nodes[asn]['emissions'], float('inf'),
+                                f"AS{asn} should not have 'inf' emissions")
+
+    def test_emissions_assigned_correctly(self):
+        self.graph.add_emission_data("2023-05-01 12:00:00")
+        actual = self.graph.graph.nodes[self.node_id]['emissions']
+        expected = 162.59  
+        self.assertEqual(actual, expected, f"Expected emissions to be {expected}, but got {actual}")
+
+    def test_emissions_missing_datetime_returns_inf(self):
+        self.graph.add_emission_data("2024-05-01 14:00:00")
+        actual = self.graph.graph.nodes[self.node_id]['emissions']
+        self.assertEqual(actual, float('inf'), f"Expected emissions to be 'inf' for missing datetime, got {actual}")
+
+    def test_node_with_missing_iso_is_skipped(self):
+        node_without_iso = 99999
+        self.graph.graph.add_node(node_without_iso)
+        self.graph.add_emission_data("2023-05-01 12:00:00")
+        self.assertNotIn('emissions', self.graph.graph.nodes[node_without_iso],
+                         "Node without ISO code should not have 'emissions' key")
+        
+
+    def test_all_countries_have_valid_emissions(self):
+        with open(r"C:\Users\annal\Documents\GitHub\Tesi\topology_map\data\countries.txt", "r", encoding="utf-8") as file:
+            countries = [c.strip().strip('"') for c in file.read().split(",") if c.strip()]
+
+        for country in countries:
+            
+            with open(r"C:\Users\annal\Desktop\Tesi\data\geolocation_data_global.json", "r") as f:
+                data = json.load(f)
+                as_to_country = {int(entry['as_number']): entry['country'] for entry in data}
+                as_to_region = {int(entry['as_number']): entry['region'] for entry in data}
+
+            with open(self.iso_mapping_path, "r") as f:
+                iso_data = json.load(f)
+
+            as_to_iso_code = {}
+            # Then inside your loop where you check ISO codes:
+            for entry in data:
+                asn = int(entry['as_number'])
+                ctry = entry.get('country', '').strip()
+                region = entry.get('region', '').strip()
+                region_key = f"{ctry} - {region}" if region else None
+
+                iso_code = None
+
+                # 1. Try region-specific ISO
+                if region_key and region_key in iso_data.get("regions", {}):
+                    iso_code = iso_data["regions"][region_key]["iso_code"]
+                    # print(f"Found ISO code from region key '{region_key}': {iso_code}")
+
+                # 2. If no region match, try country-level ISO
+                elif ctry in iso_data.get("countries", {}):
+                    iso_code = iso_data["countries"][ctry]["iso_code"]
+                    # print(f"Found ISO code from country '{ctry}': {iso_code}")
+
+                # 3. No ISO found? Conditional silent skip for Ukraine
+                else:
+                    if ctry not in countries:
+                        continue  # Skip silently
+                    else:
+                        print(f"No ISO code found for country '{ctry}', region '{region}', skipping ASN {asn}")
+                        continue
+
+                # === Emissions file check ===
+                if iso_code:
+                    csv_filename = f"{iso_code}_2023_hourly.csv"
+                    csv_path = os.path.join(self.emissions_path, csv_filename)
+
+                    if os.path.exists(csv_path):
+                        as_to_iso_code[asn] = iso_code
+                    else:
+                        if ctry not in countries:
+                            continue  # Skip silently if Ukraine is excluded
+                        else:
+                            print(f"Emissions file not found for ISO code {iso_code}: {csv_filename}")
+
+            if region_key and region_key in iso_data.get("regions", {}):
+                iso_code = iso_data["regions"][region_key]["iso_code"]
+                print(f"Found region ISO: {iso_code}")
+            if not iso_code and ctry in iso_data.get("countries", {}):
+                iso_code = iso_data["countries"][ctry]["iso_code"]
+                print(f"Found country ISO: {iso_code}")
+
+            # === Initialize ASGraph with full mappings
+            graph = ASGraph(
+                data_file=r"C:\Users\annal\Desktop\Tesi\data\geolocation_data_global.json",
+                relationships_file=r"C:\Users\annal\Desktop\Tesi\topology_data\20240101.as-rel2.txt",
+                countries=[country],
+                iso_mapping_file=self.iso_mapping_path,
+                emissions_folder_path=self.emissions_path,
+                as_to_country=as_to_country,
+                as_to_region=as_to_region,
+                as_to_iso_code=as_to_iso_code,
+                load_data=True
+            )
+
+            graph.as_to_country = as_to_country
+            graph.as_to_region = as_to_region
+            graph.as_to_iso_code = as_to_iso_code  
+            graph.node_costs = {}
+
+            # === Build and test
+            graph.add_nodes()
+            graph.add_edges()
+            graph.add_emission_data("2023-05-01 12:00:00")
+
+            valid_ases = []
+            invalid_ases = []
+
+            for asn in graph.graph.nodes:
+                node_data = graph.graph.nodes[asn]
+                iso_code = node_data.get("iso")
+                emissions = node_data.get("emissions")
+
+                if emissions is not None and emissions != float("inf") and emissions != 0:
+                    valid_ases.append(asn)
+                else:
+                    invalid_ases.append((asn, iso_code, emissions))
+            
+
+            print(f"Country: {country}")
+            print(f"Total valid ASes with emissions: {len(valid_ases)}")
+            print(f"Invalid ASes (no emissions / zero / inf): {invalid_ases}")
+
+            self.assertGreaterEqual(len(valid_ases), 0, f"No valid emissions found for country: {country}")
+
+if __name__ == '__main__':
+    unittest.main()

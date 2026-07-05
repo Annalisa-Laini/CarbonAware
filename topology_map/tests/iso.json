@@ -1,0 +1,2229 @@
+{
+  "countries": {
+    "AD": {
+      "iso_code": "ES",
+      "zoneName": "Andorra",
+      "countryName": ""
+    },
+    "AE": {
+      "iso_code": "AE",
+      "zoneName": "United Arab Emirates",
+      "countryName": ""
+    },
+    "AF": {
+      "iso_code": "AF",
+      "zoneName": "Afghanistan",
+      "countryName": ""
+    },
+    "AG": {
+      "iso_code": "AG",
+      "zoneName": "Antigua and Barbuda",
+      "countryName": ""
+    },
+    "AL": {
+      "iso_code": "AL",
+      "zoneName": "Albania",
+      "countryName": ""
+    },
+    "AM": {
+      "iso_code": "AM",
+      "zoneName": "Armenia",
+      "countryName": ""
+    },
+    "AO": {
+      "iso_code": "AO",
+      "zoneName": "Angola",
+      "countryName": ""
+    },
+    "AR": {
+      "iso_code": "AR",
+      "zoneName": "Argentina",
+      "countryName": ""
+    },
+    "AT": {
+      "iso_code": "AT",
+      "zoneName": "Austria",
+      "countryName": ""
+    },
+    "AU": {
+      "iso_code": "AU",
+      "zoneName": "Australia",
+      "countryName": ""
+    },
+    "AU-LH": {
+      "iso_code": "AU-LH",
+      "zoneName": "Lord Howe Island",
+      "countryName": "Australia"
+    },
+    "AU-NSW": {
+      "iso_code": "AU-NSW",
+      "zoneName": "New South Wales",
+      "countryName": "Australia"
+    },
+    "AU-NT": {
+      "iso_code": "AU-NT",
+      "zoneName": "Northern Territory",
+      "countryName": "Australia"
+    },
+    "AU-QLD": {
+      "iso_code": "AU-QLD",
+      "zoneName": "Queensland",
+      "countryName": "Australia"
+    },
+    "AU-SA": {
+      "iso_code": "AU-SA",
+      "zoneName": "South Australia",
+      "countryName": "Australia"
+    },
+    "AU-TAS": {
+      "iso_code": "AU-TAS",
+      "zoneName": "Tasmania",
+      "countryName": "Australia"
+    },
+    "AU-TAS-CBI": {
+      "iso_code": "AU-TAS-CBI",
+      "zoneName": "Cape Barren Island",
+      "countryName": "Australia"
+    },
+    "AU-TAS-FI": {
+      "iso_code": "AU-TAS-FI",
+      "zoneName": "Flinders Island",
+      "countryName": "Australia"
+    },
+    "AU-TAS-KI": {
+      "iso_code": "AU-TAS-KI",
+      "zoneName": "King Island",
+      "countryName": "Australia"
+    },
+    "AU-VIC": {
+      "iso_code": "AU-VIC",
+      "zoneName": "Victoria",
+      "countryName": "Australia"
+    },
+    "AU-WA": {
+      "iso_code": "AU-WA",
+      "zoneName": "Western Australia",
+      "countryName": "Australia"
+    },
+    "AU-WA-RI": {
+      "iso_code": "AU-WA-RI",
+      "zoneName": "Rottnest Island",
+      "countryName": "Australia"
+    },
+    "AW": {
+      "iso_code": "AW",
+      "zoneName": "Aruba",
+      "countryName": ""
+    },
+    "AX": {
+      "iso_code": "AX",
+      "zoneName": "\u00c5land Islands",
+      "countryName": ""
+    },
+    "AZ": {
+      "iso_code": "AZ",
+      "zoneName": "Azerbaijan",
+      "countryName": ""
+    },
+    "BA": {
+      "iso_code": "BA",
+      "zoneName": "Bosnia and Herzegovina",
+      "countryName": ""
+    },
+    "BB": {
+      "iso_code": "BB",
+      "zoneName": "Barbados",
+      "countryName": ""
+    },
+    "BD": {
+      "iso_code": "BD",
+      "zoneName": "Bangladesh",
+      "countryName": ""
+    },
+    "BE": {
+      "iso_code": "BE",
+      "zoneName": "Belgium",
+      "countryName": ""
+    },
+    "BF": {
+      "iso_code": "BF",
+      "zoneName": "Burkina Faso",
+      "countryName": ""
+    },
+    "BG": {
+      "iso_code": "BG",
+      "zoneName": "Bulgaria",
+      "countryName": ""
+    },
+    "BH": {
+      "iso_code": "BH",
+      "zoneName": "Bahrain",
+      "countryName": ""
+    },
+    "BI": {
+      "iso_code": "BI",
+      "zoneName": "Burundi",
+      "countryName": ""
+    },
+    "BJ": {
+      "iso_code": "BJ",
+      "zoneName": "Benin",
+      "countryName": ""
+    },
+    "BM": {
+      "iso_code": "BM",
+      "zoneName": "Bermuda",
+      "countryName": ""
+    },
+    "BN": {
+      "iso_code": "BN",
+      "zoneName": "Brunei",
+      "countryName": ""
+    },
+    "BO": {
+      "iso_code": "BO",
+      "zoneName": "Bolivia",
+      "countryName": ""
+    },
+    "BR": {
+      "iso_code": "BR",
+      "zoneName": "Brazil",
+      "countryName": ""
+    },
+    "BR-CS": {
+      "iso_code": "BR-CS",
+      "zoneName": "Central Brazil",
+      "countryName": "Brazil"
+    },
+    "BR-N": {
+      "iso_code": "BR-N",
+      "zoneName": "North Brazil",
+      "countryName": "Brazil"
+    },
+    "BR-NE": {
+      "iso_code": "BR-NE",
+      "zoneName": "North-East Brazil",
+      "countryName": "Brazil"
+    },
+    "BR-S": {
+      "iso_code": "BR-S",
+      "zoneName": "South Brazil",
+      "countryName": "Brazil"
+    },
+    "BS": {
+      "iso_code": "BS",
+      "zoneName": "Bahamas",
+      "countryName": ""
+    },
+    "BT": {
+      "iso_code": "BT",
+      "zoneName": "Bhutan",
+      "countryName": ""
+    },
+    "BW": {
+      "iso_code": "BW",
+      "zoneName": "Botswana",
+      "countryName": ""
+    },
+    "BY": {
+      "iso_code": "BY",
+      "zoneName": "Belarus",
+      "countryName": ""
+    },
+    "BZ": {
+      "iso_code": "BZ",
+      "zoneName": "Belize",
+      "countryName": ""
+    },
+    "CA": {
+      "iso_code": "CA",
+      "zoneName": "Canada",
+      "countryName": ""
+    },
+    "CA-AB": {
+      "iso_code": "CA-AB",
+      "zoneName": "Alberta",
+      "countryName": "Canada"
+    },
+    "CA-BC": {
+      "iso_code": "CA-BC",
+      "zoneName": "British Columbia",
+      "countryName": "Canada"
+    },
+    "CA-MB": {
+      "iso_code": "CA-MB",
+      "zoneName": "Manitoba",
+      "countryName": "Canada"
+    },
+    "CA-NB": {
+      "iso_code": "CA-NB",
+      "zoneName": "New Brunswick",
+      "countryName": "Canada"
+    },
+    "CA-NL": {
+      "iso_code": "CA-NL",
+      "zoneName": "Newfoundland and Labrador",
+      "countryName": "Canada"
+    },
+    "CA-NS": {
+      "iso_code": "CA-NS",
+      "zoneName": "Nova Scotia",
+      "countryName": "Canada"
+    },
+    "CA-NT": {
+      "iso_code": "CA-NT",
+      "zoneName": "Northwest Territories",
+      "countryName": "Canada"
+    },
+    "CA-NU": {
+      "iso_code": "CA-NU",
+      "zoneName": "Nunavut",
+      "countryName": "Canada"
+    },
+    "CA-ON": {
+      "iso_code": "CA-ON",
+      "zoneName": "Ontario",
+      "countryName": "Canada"
+    },
+    "CA-PE": {
+      "iso_code": "CA-PE",
+      "zoneName": "Prince Edward Island",
+      "countryName": "Canada"
+    },
+    "CA-QC": {
+      "iso_code": "CA-QC",
+      "zoneName": "Qu\u00e9bec",
+      "countryName": "Canada"
+    },
+    "CA-SK": {
+      "iso_code": "CA-SK",
+      "zoneName": "Saskatchewan",
+      "countryName": "Canada"
+    },
+    "CA-YT": {
+      "iso_code": "CA-YT",
+      "zoneName": "Yukon",
+      "countryName": "Canada"
+    },
+    "CD": {
+      "iso_code": "CD",
+      "zoneName": "Democratic Republic of the Congo",
+      "countryName": ""
+    },
+    "CF": {
+      "iso_code": "CF",
+      "zoneName": "Central African Republic",
+      "countryName": ""
+    },
+    "CG": {
+      "iso_code": "CG",
+      "zoneName": "Congo",
+      "countryName": ""
+    },
+    "CH": {
+      "iso_code": "CH",
+      "zoneName": "Switzerland",
+      "countryName": ""
+    },
+    "CI": {
+      "iso_code": "CI",
+      "zoneName": "Ivory Coast",
+      "countryName": ""
+    },
+    "CL": {
+      "iso_code": "CL",
+      "zoneName": "Chile",
+      "countryName": "Chile"
+    },
+    "CL-CHP": {
+      "iso_code": "CL-CHP",
+      "zoneName": "Easter Island",
+      "countryName": "Chile"
+    },
+    "CL-SEA": {
+      "iso_code": "CL-SEA",
+      "zoneName": "Sistema El\u00e9ctrico de Ays\u00e9n",
+      "countryName": "Chile"
+    },
+    "CL-SEM": {
+      "iso_code": "CL-SEM",
+      "zoneName": "Sistema El\u00e9ctrico de Magallanes",
+      "countryName": "Chile"
+    },
+    "CL-SEN": {
+      "iso_code": "CL-SEN",
+      "zoneName": "Sistema El\u00e9ctrico Nacional",
+      "countryName": "Chile"
+    },
+    "CM": {
+      "iso_code": "CM",
+      "zoneName": "Cameroon",
+      "countryName": ""
+    },
+    "CN": {
+      "iso_code": "CN",
+      "zoneName": "China",
+      "countryName": ""
+    },
+    "CO": {
+      "iso_code": "CO",
+      "zoneName": "Colombia",
+      "countryName": ""
+    },
+    "CR": {
+      "iso_code": "CR",
+      "zoneName": "Costa Rica",
+      "countryName": ""
+    },
+    "CU": {
+      "iso_code": "CU",
+      "zoneName": "Cuba",
+      "countryName": ""
+    },
+    "CV": {
+      "iso_code": "CV",
+      "zoneName": "Cabo Verde",
+      "countryName": ""
+    },
+    "CW": {
+      "iso_code": "CW",
+      "zoneName": "Cura\u00e7ao",
+      "countryName": ""
+    },
+    "CY": {
+      "iso_code": "CY",
+      "zoneName": "Cyprus",
+      "countryName": ""
+    },
+    "CZ": {
+      "iso_code": "CZ",
+      "zoneName": "Czechia",
+      "countryName": ""
+    },
+    "DE": {
+      "iso_code": "DE",
+      "zoneName": "Germany",
+      "countryName": ""
+    },
+    "DJ": {
+      "iso_code": "DJ",
+      "zoneName": "Djibouti",
+      "countryName": ""
+    },
+    "DK": {
+      "iso_code": "DK",
+      "zoneName": "Denmark",
+      "countryName": ""
+    },
+    "DK-BHM": {
+      "iso_code": "DK-BHM",
+      "zoneName": "Bornholm",
+      "countryName": "Denmark"
+    },
+    "DK-DK1": {
+      "iso_code": "DK-DK1",
+      "zoneName": "West Denmark",
+      "countryName": "Denmark"
+    },
+    "DK-DK2": {
+      "iso_code": "DK-DK2",
+      "zoneName": "East Denmark",
+      "countryName": "Denmark"
+    },
+    "DM": {
+      "iso_code": "DM",
+      "zoneName": "Dominica",
+      "countryName": ""
+    },
+    "DO": {
+      "iso_code": "DO",
+      "zoneName": "Dominican Republic",
+      "countryName": ""
+    },
+    "DZ": {
+      "iso_code": "DZ",
+      "zoneName": "Algeria",
+      "countryName": ""
+    },
+    "EC": {
+      "iso_code": "EC",
+      "zoneName": "Ecuador",
+      "countryName": ""
+    },
+    "EE": {
+      "iso_code": "EE",
+      "zoneName": "Estonia",
+      "countryName": ""
+    },
+    "EG": {
+      "iso_code": "EG",
+      "zoneName": "Egypt",
+      "countryName": ""
+    },
+    "EH": {
+      "iso_code": "EH",
+      "zoneName": "Western Sahara",
+      "countryName": ""
+    },
+    "ER": {
+      "iso_code": "ER",
+      "zoneName": "Eritrea",
+      "countryName": ""
+    },
+    "ES": {
+      "iso_code": "ES",
+      "zoneName": "Spain",
+      "countryName": ""
+    },
+    "ES-CE": {
+      "iso_code": "ES-CE",
+      "zoneName": "Ceuta",
+      "countryName": "Spain"
+    },
+    "ES-CN-FV": {
+      "iso_code": "ES-CN-FV",
+      "zoneName": "Fuerteventura",
+      "countryName": "Spain"
+    },
+    "ES-CN-GC": {
+      "iso_code": "ES-CN-GC",
+      "zoneName": "Gran Canaria",
+      "countryName": "Spain"
+    },
+    "ES-CN-HI": {
+      "iso_code": "ES-CN-HI",
+      "zoneName": "El Hierro",
+      "countryName": "Spain"
+    },
+    "ES-CN-IG": {
+      "iso_code": "ES-CN-IG",
+      "zoneName": "Isla de la Gomera",
+      "countryName": "Spain"
+    },
+    "ES-CN-LP": {
+      "iso_code": "ES-CN-LP",
+      "zoneName": "La Palma",
+      "countryName": "Spain"
+    },
+    "ES-CN-LZ": {
+      "iso_code": "ES-CN-LZ",
+      "zoneName": "Lanzarote",
+      "countryName": "Spain"
+    },
+    "ES-CN-TE": {
+      "iso_code": "ES-CN-TE",
+      "zoneName": "Tenerife",
+      "countryName": "Spain"
+    },
+    "ES-IB-FO": {
+      "iso_code": "ES-IB-FO",
+      "zoneName": "Formentera",
+      "countryName": "Spain"
+    },
+    "ES-IB-IZ": {
+      "iso_code": "ES-IB-IZ",
+      "zoneName": "Ibiza",
+      "countryName": "Spain"
+    },
+    "ES-IB-MA": {
+      "iso_code": "ES-IB-MA",
+      "zoneName": "Mallorca",
+      "countryName": "Spain"
+    },
+    "ES-IB-ME": {
+      "iso_code": "ES-IB-ME",
+      "zoneName": "Menorca",
+      "countryName": "Spain"
+    },
+    "ES-ML": {
+      "iso_code": "ES-ML",
+      "zoneName": "Melilla",
+      "countryName": "Spain"
+    },
+    "ET": {
+      "iso_code": "ET",
+      "zoneName": "Ethiopia",
+      "countryName": ""
+    },
+    "FI": {
+      "iso_code": "FI",
+      "zoneName": "Finland",
+      "countryName": ""
+    },
+    "FJ": {
+      "iso_code": "FJ",
+      "zoneName": "Fiji",
+      "countryName": ""
+    },
+    "FK": {
+      "iso_code": "FK",
+      "zoneName": "Falkland Islands",
+      "countryName": ""
+    },
+    "FM": {
+      "iso_code": "FM",
+      "zoneName": "Micronesia",
+      "countryName": ""
+    },
+    "FO": {
+      "iso_code": "FO-MI",
+      "zoneName": "Faroe Islands",
+      "countryName": ""
+    },
+    "FO-MI": {
+      "iso_code": "FO-MI",
+      "zoneName": "Main Islands",
+      "countryName": "Faroe Islands"
+    },
+    "FO-SI": {
+      "iso_code": "FO-SI",
+      "zoneName": "South Island",
+      "countryName": "Faroe Islands"
+    },
+    "FR": {
+      "iso_code": "FR",
+      "zoneName": "France",
+      "countryName": ""
+    },
+    "FR-COR": {
+      "iso_code": "FR-COR",
+      "zoneName": "Corsica",
+      "countryName": "France"
+    },
+    "GA": {
+      "iso_code": "GA",
+      "zoneName": "Gabon",
+      "countryName": ""
+    },
+    "GB": {
+      "iso_code": "GB",
+      "zoneName": "Great Britain",
+      "countryName": ""
+    },
+    "GB-NIR": {
+      "iso_code": "GB-NIR",
+      "zoneName": "Northern Ireland",
+      "countryName": ""
+    },
+    "GB-ORK": {
+      "iso_code": "GB-ORK",
+      "zoneName": "Orkney Islands",
+      "countryName": "Great Britain"
+    },
+    "GB-ZET": {
+      "iso_code": "GB-ZET",
+      "zoneName": "Shetland Islands",
+      "countryName": "Great Britain"
+    },
+    "GE": {
+      "iso_code": "GE",
+      "zoneName": "Georgia",
+      "countryName": ""
+    },
+    "GF": {
+      "iso_code": "GF",
+      "zoneName": "French Guiana",
+      "countryName": ""
+    },
+    "GG": {
+      "iso_code": "GG",
+      "zoneName": "Guernsey",
+      "countryName": ""
+    },
+    "GH": {
+      "iso_code": "GH",
+      "zoneName": "Ghana",
+      "countryName": ""
+    },
+    "GI": {
+      "iso_code": "GI",
+      "zoneName": "Gibraltar",
+      "countryName": ""
+    },
+    "GL": {
+      "iso_code": "GL",
+      "zoneName": "Greenland",
+      "countryName": ""
+    },
+    "GM": {
+      "iso_code": "GM",
+      "zoneName": "Gambia",
+      "countryName": ""
+    },
+    "GN": {
+      "iso_code": "GN",
+      "zoneName": "Guinea",
+      "countryName": ""
+    },
+    "GP": {
+      "iso_code": "GP",
+      "zoneName": "Guadeloupe",
+      "countryName": ""
+    },
+    "GQ": {
+      "iso_code": "GQ",
+      "zoneName": "Equatorial Guinea",
+      "countryName": ""
+    },
+    "GR": {
+      "iso_code": "GR",
+      "zoneName": "Greece",
+      "countryName": ""
+    },
+    "GS": {
+      "iso_code": "GS",
+      "zoneName": "South Georgia and the South Sandwich Islands",
+      "countryName": ""
+    },
+    "GT": {
+      "iso_code": "GT",
+      "zoneName": "Guatemala",
+      "countryName": ""
+    },
+    "GU": {
+      "iso_code": "GU",
+      "zoneName": "Guam",
+      "countryName": ""
+    },
+    "GW": {
+      "iso_code": "GW",
+      "zoneName": "Guinea-Bissau",
+      "countryName": ""
+    },
+    "GY": {
+      "iso_code": "GY",
+      "zoneName": "Guyana",
+      "countryName": ""
+    },
+    "HK": {
+      "iso_code": "HK",
+      "zoneName": "Hong Kong",
+      "countryName": ""
+    },
+    "HM": {
+      "iso_code": "HM",
+      "zoneName": "Heard Island and McDonald Islands",
+      "countryName": ""
+    },
+    "HN": {
+      "iso_code": "HN",
+      "zoneName": "Honduras",
+      "countryName": ""
+    },
+    "HR": {
+      "iso_code": "HR",
+      "zoneName": "Croatia",
+      "countryName": ""
+    },
+    "HT": {
+      "iso_code": "HT",
+      "zoneName": "Haiti",
+      "countryName": ""
+    },
+    "HU": {
+      "iso_code": "HU",
+      "zoneName": "Hungary",
+      "countryName": ""
+    },
+    "ID": {
+      "iso_code": "ID",
+      "zoneName": "Indonesia",
+      "countryName": ""
+    },
+    "IE": {
+      "iso_code": "IE",
+      "zoneName": "Ireland",
+      "countryName": ""
+    },
+    "IL": {
+      "iso_code": "IL",
+      "zoneName": "Israel",
+      "countryName": ""
+    },
+    "IM": {
+      "iso_code": "IM",
+      "zoneName": "Isle of Man",
+      "countryName": ""
+    },
+    "IN": {
+      "iso_code": "IN",
+      "zoneName": "Mainland India",
+      "countryName": ""
+    },
+    "IN-AN": {
+      "iso_code": "IN-AN",
+      "zoneName": "Andaman and Nicobar Islands",
+      "countryName": "India"
+    },
+    "IN-DL": {
+      "iso_code": "IN-DL",
+      "zoneName": "Unknown",
+      "countryName": ""
+    },
+    "IN-EA": {
+      "iso_code": "IN-EA",
+      "zoneName": "Eastern India",
+      "countryName": "India"
+    },
+    "IN-HP": {
+      "iso_code": "IN-HP",
+      "zoneName": "Himachal Pradesh",
+      "countryName": "India"
+    },
+    "IN-KA": {
+      "iso_code": "IN-KA",
+      "zoneName": "Unknown",
+      "countryName": ""
+    },
+    "IN-MH": {
+      "iso_code": "IN-MH",
+      "zoneName": "Unknown",
+      "countryName": ""
+    },
+    "IN-NE": {
+      "iso_code": "IN-NE",
+      "zoneName": "North Eastern India",
+      "countryName": "India"
+    },
+    "IN-NO": {
+      "iso_code": "IN-NO",
+      "zoneName": "Northern India",
+      "countryName": "India"
+    },
+    "IN-PB": {
+      "iso_code": "IN-PB",
+      "zoneName": "Unknown",
+      "countryName": ""
+    },
+    "IN-SO": {
+      "iso_code": "IN-SO",
+      "zoneName": "Southern India",
+      "countryName": "India"
+    },
+    "IN-UP": {
+      "iso_code": "IN-UP",
+      "zoneName": "Uttar Pradesh",
+      "countryName": "India"
+    },
+    "IN-UT": {
+      "iso_code": "IN-UT",
+      "zoneName": "Uttarakhand",
+      "countryName": "India"
+    },
+    "IN-WE": {
+      "iso_code": "IN-WE",
+      "zoneName": "Western India",
+      "countryName": "India"
+    },
+    "IQ": {
+      "iso_code": "IQ",
+      "zoneName": "Iraq",
+      "countryName": ""
+    },
+    "IR": {
+      "iso_code": "IR",
+      "zoneName": "Iran",
+      "countryName": ""
+    },
+    "IS": {
+      "iso_code": "IS",
+      "zoneName": "Iceland",
+      "countryName": ""
+    },
+    "IT": {
+      "iso_code": "IT",
+      "zoneName": "Italy",
+      "countryName": ""
+    },
+    "SM": {
+      "iso_code": "IT",
+      "zoneName": "San Marino",
+      "countryName": ""
+    },
+    "VA": {
+      "iso_code": "IT",
+      "zoneName": "Vatican City",
+      "countryName": ""
+    },
+    "JE": {
+      "iso_code": "JE",
+      "zoneName": "Jersey",
+      "countryName": ""
+    },
+    "JM": {
+      "iso_code": "JM",
+      "zoneName": "Jamaica",
+      "countryName": ""
+    },
+    "JO": {
+      "iso_code": "JO",
+      "zoneName": "Jordan",
+      "countryName": ""
+    },
+    "JP": {
+      "iso_code": "JP",
+      "zoneName": "Japan",
+      "countryName": ""
+    },
+    "JP-CB": {
+      "iso_code": "JP-CB",
+      "zoneName": "Ch\u016bbu",
+      "countryName": "Japan"
+    },
+    "JP-CG": {
+      "iso_code": "JP-CG",
+      "zoneName": "Ch\u016bgoku",
+      "countryName": "Japan"
+    },
+    "JP-HKD": {
+      "iso_code": "JP-HKD",
+      "zoneName": "Hokkaid\u014d",
+      "countryName": "Japan"
+    },
+    "JP-HR": {
+      "iso_code": "JP-HR",
+      "zoneName": "Hokuriku",
+      "countryName": "Japan"
+    },
+    "JP-KN": {
+      "iso_code": "JP-KN",
+      "zoneName": "Kansai",
+      "countryName": "Japan"
+    },
+    "JP-KY": {
+      "iso_code": "JP-KY",
+      "zoneName": "Ky\u016bsh\u016b",
+      "countryName": "Japan"
+    },
+    "JP-ON": {
+      "iso_code": "JP-ON",
+      "zoneName": "Okinawa",
+      "countryName": "Japan"
+    },
+    "JP-SK": {
+      "iso_code": "JP-SK",
+      "zoneName": "Shikoku",
+      "countryName": "Japan"
+    },
+    "JP-TH": {
+      "iso_code": "JP-TH",
+      "zoneName": "T\u014dhoku",
+      "countryName": "Japan"
+    },
+    "JP-TK": {
+      "iso_code": "JP-TK",
+      "zoneName": "T\u014dky\u014d",
+      "countryName": "Japan"
+    },
+    "KE": {
+      "iso_code": "KE",
+      "zoneName": "Kenya",
+      "countryName": ""
+    },
+    "KG": {
+      "iso_code": "KG",
+      "zoneName": "Kyrgyzstan",
+      "countryName": ""
+    },
+    "KH": {
+      "iso_code": "KH",
+      "zoneName": "Cambodia",
+      "countryName": ""
+    },
+    "KM": {
+      "iso_code": "KM",
+      "zoneName": "Comoros",
+      "countryName": ""
+    },
+    "KP": {
+      "iso_code": "KP",
+      "zoneName": "North Korea",
+      "countryName": ""
+    },
+    "KR": {
+      "iso_code": "KR",
+      "zoneName": "South Korea",
+      "countryName": ""
+    },
+    "KW": {
+      "iso_code": "KW",
+      "zoneName": "Kuwait",
+      "countryName": ""
+    },
+    "KY": {
+      "iso_code": "KY",
+      "zoneName": "Cayman Islands",
+      "countryName": ""
+    },
+    "KZ": {
+      "iso_code": "KZ",
+      "zoneName": "Kazakhstan",
+      "countryName": ""
+    },
+    "LA": {
+      "iso_code": "LA",
+      "zoneName": "Laos",
+      "countryName": ""
+    },
+    "LB": {
+      "iso_code": "LB",
+      "zoneName": "Lebanon",
+      "countryName": ""
+    },
+    "LC": {
+      "iso_code": "LC",
+      "zoneName": "Saint Lucia",
+      "countryName": ""
+    },
+    "LI": {
+      "iso_code": "CH",
+      "zoneName": "Liechtenstein",
+      "countryName": ""
+    },
+    "LK": {
+      "iso_code": "LK",
+      "zoneName": "Sri Lanka",
+      "countryName": ""
+    },
+    "LR": {
+      "iso_code": "LR",
+      "zoneName": "Liberia",
+      "countryName": ""
+    },
+    "LS": {
+      "iso_code": "LS",
+      "zoneName": "Lesotho",
+      "countryName": ""
+    },
+    "LT": {
+      "iso_code": "LT",
+      "zoneName": "Lithuania",
+      "countryName": ""
+    },
+    "LU": {
+      "iso_code": "LU",
+      "zoneName": "Luxembourg",
+      "countryName": ""
+    },
+    "LV": {
+      "iso_code": "LV",
+      "zoneName": "Latvia",
+      "countryName": ""
+    },
+    "LY": {
+      "iso_code": "LY",
+      "zoneName": "Libya",
+      "countryName": ""
+    },
+    "MA": {
+      "iso_code": "MA",
+      "zoneName": "Morocco",
+      "countryName": ""
+    },
+    "MC": {
+      "iso_code": "FR",
+      "zoneName": "Monaco",
+      "countryName": ""
+    },
+    "MD": {
+      "iso_code": "MD",
+      "zoneName": "Moldova",
+      "countryName": ""
+    },
+    "ME": {
+      "iso_code": "ME",
+      "zoneName": "Montenegro",
+      "countryName": ""
+    },
+    "MG": {
+      "iso_code": "MG",
+      "zoneName": "Madagascar",
+      "countryName": ""
+    },
+    "MK": {
+      "iso_code": "MK",
+      "zoneName": "North Macedonia",
+      "countryName": ""
+    },
+    "ML": {
+      "iso_code": "ML",
+      "zoneName": "Mali",
+      "countryName": ""
+    },
+    "MM": {
+      "iso_code": "MM",
+      "zoneName": "Myanmar",
+      "countryName": ""
+    },
+    "MN": {
+      "iso_code": "MN",
+      "zoneName": "Mongolia",
+      "countryName": ""
+    },
+    "MO": {
+      "iso_code": "MO",
+      "zoneName": "Macao",
+      "countryName": ""
+    },
+    "MQ": {
+      "iso_code": "MQ",
+      "zoneName": "Martinique",
+      "countryName": ""
+    },
+    "MR": {
+      "iso_code": "MR",
+      "zoneName": "Mauritania",
+      "countryName": ""
+    },
+    "MT": {
+      "iso_code": "MT",
+      "zoneName": "Malta",
+      "countryName": ""
+    },
+    "MU": {
+      "iso_code": "MU",
+      "zoneName": "Mauritius",
+      "countryName": ""
+    },
+    "MV": {
+      "iso_code": "MV",
+      "zoneName": "Maldives",
+      "countryName": ""
+    },
+    "MW": {
+      "iso_code": "MW",
+      "zoneName": "Malawi",
+      "countryName": ""
+    },
+    "MX": {
+      "iso_code": "MX",
+      "zoneName": "Mexico",
+      "countryName": ""
+    },
+    "MY": {
+      "iso_code": "MY",
+      "zoneName": "Malaysia",
+      "countryName": ""
+    },
+    "MY-EM": {
+      "iso_code": "MY-EM",
+      "zoneName": "Borneo",
+      "countryName": "Malaysia"
+    },
+    "MY-WM": {
+      "iso_code": "MY-WM",
+      "zoneName": "Peninsula",
+      "countryName": "Malaysia"
+    },
+    "MZ": {
+      "iso_code": "MZ",
+      "zoneName": "Mozambique",
+      "countryName": ""
+    },
+    "NA": {
+      "iso_code": "NA",
+      "zoneName": "Namibia",
+      "countryName": ""
+    },
+    "NC": {
+      "iso_code": "NC",
+      "zoneName": "New Caledonia",
+      "countryName": ""
+    },
+    "NE": {
+      "iso_code": "NE",
+      "zoneName": "Niger",
+      "countryName": ""
+    },
+    "NG": {
+      "iso_code": "NG",
+      "zoneName": "Nigeria",
+      "countryName": ""
+    },
+    "NI": {
+      "iso_code": "NI",
+      "zoneName": "Nicaragua",
+      "countryName": ""
+    },
+    "NL": {
+      "iso_code": "NL",
+      "zoneName": "Netherlands",
+      "countryName": ""
+    },
+    "NO": {
+      "iso_code": "NO",
+      "zoneName": "Norway",
+      "countryName": ""
+    },
+    "NO-NO1": {
+      "iso_code": "NO-NO1",
+      "zoneName": "Southeast Norway",
+      "countryName": "Norway"
+    },
+    "NO-NO2": {
+      "iso_code": "NO-NO2",
+      "zoneName": "Southwest Norway",
+      "countryName": "Norway"
+    },
+    "NO-NO3": {
+      "iso_code": "NO-NO3",
+      "zoneName": "Middle Norway",
+      "countryName": "Norway"
+    },
+    "NO-NO4": {
+      "iso_code": "NO-NO4",
+      "zoneName": "North Norway",
+      "countryName": "Norway"
+    },
+    "NO-NO5": {
+      "iso_code": "NO-NO5",
+      "zoneName": "West Norway",
+      "countryName": "Norway"
+    },
+    "NP": {
+      "iso_code": "NP",
+      "zoneName": "Nepal",
+      "countryName": ""
+    },
+    "NZ": {
+      "iso_code": "NZ",
+      "zoneName": "New Zealand",
+      "countryName": ""
+    },
+    "NZ-NZA": {
+      "iso_code": "NZ-NZA",
+      "zoneName": "Auckland Islands",
+      "countryName": "New Zealand"
+    },
+    "NZ-NZC": {
+      "iso_code": "NZ-NZC",
+      "zoneName": "Chatham Islands",
+      "countryName": "New Zealand"
+    },
+    "NZ-NZST": {
+      "iso_code": "NZ-NZST",
+      "zoneName": "Stewart Island",
+      "countryName": "New Zealand"
+    },
+    "OM": {
+      "iso_code": "OM",
+      "zoneName": "Oman",
+      "countryName": ""
+    },
+    "PA": {
+      "iso_code": "PA",
+      "zoneName": "Panama",
+      "countryName": ""
+    },
+    "PE": {
+      "iso_code": "PE",
+      "zoneName": "Peru",
+      "countryName": ""
+    },
+    "PF": {
+      "iso_code": "PF",
+      "zoneName": "French Polynesia",
+      "countryName": ""
+    },
+    "PG": {
+      "iso_code": "PG",
+      "zoneName": "Papua New Guinea",
+      "countryName": ""
+    },
+    "PH": {
+      "iso_code": "PH",
+      "zoneName": "Philippines",
+      "countryName": ""
+    },
+    "PH-LU": {
+      "iso_code": "PH-LU",
+      "zoneName": "Luzon",
+      "countryName": "Philippines"
+    },
+    "PH-MI": {
+      "iso_code": "PH-MI",
+      "zoneName": "Mindanao",
+      "countryName": "Philippines"
+    },
+    "PH-VI": {
+      "iso_code": "PH-VI",
+      "zoneName": "Visayas",
+      "countryName": "Philippines"
+    },
+    "PK": {
+      "iso_code": "PK",
+      "zoneName": "Pakistan",
+      "countryName": ""
+    },
+    "PL": {
+      "iso_code": "PL",
+      "zoneName": "Poland",
+      "countryName": ""
+    },
+    "PM": {
+      "iso_code": "PM",
+      "zoneName": "Saint Pierre and Miquelon",
+      "countryName": ""
+    },
+    "PR": {
+      "iso_code": "PR",
+      "zoneName": "Puerto Rico",
+      "countryName": ""
+    },
+    "PS": {
+      "iso_code": "PS",
+      "zoneName": "State of Palestine",
+      "countryName": ""
+    },
+    "PT": {
+      "iso_code": "PT",
+      "zoneName": "Portugal",
+      "countryName": ""
+    },
+    "PT-AC": {
+      "iso_code": "PT-AC",
+      "zoneName": "Azores",
+      "countryName": "Portugal"
+    },
+    "PT-MA": {
+      "iso_code": "PT-MA",
+      "zoneName": "Madeira",
+      "countryName": "Portugal"
+    },
+    "PW": {
+      "iso_code": "PW",
+      "zoneName": "Palau",
+      "countryName": ""
+    },
+    "PY": {
+      "iso_code": "PY",
+      "zoneName": "Paraguay",
+      "countryName": ""
+    },
+    "QA": {
+      "iso_code": "QA",
+      "zoneName": "Qatar",
+      "countryName": ""
+    },
+    "RE": {
+      "iso_code": "RE",
+      "zoneName": "R\u00e9union",
+      "countryName": ""
+    },
+    "RO": {
+      "iso_code": "RO",
+      "zoneName": "Romania",
+      "countryName": ""
+    },
+    "RS": {
+      "iso_code": "RS",
+      "zoneName": "Serbia",
+      "countryName": ""
+    },
+    "RU": {
+      "iso_code": "RU-1",
+      "zoneName": "Russia",
+      "countryName": ""
+    },
+    "RU-1": {
+      "iso_code": "RU-1",
+      "zoneName": "Europe-Ural",
+      "countryName": "Russia"
+    },
+    "RU-2": {
+      "iso_code": "RU-2",
+      "zoneName": "Siberia",
+      "countryName": "Russia"
+    },
+    "RU-AS": {
+      "iso_code": "RU-AS",
+      "zoneName": "East",
+      "countryName": "Russia"
+    },
+    "RU-EU": {
+      "iso_code": "RU-EU",
+      "zoneName": "Arctic",
+      "countryName": "Russia"
+    },
+    "RU-FE": {
+      "iso_code": "RU-FE",
+      "zoneName": "Far East",
+      "countryName": "Russia"
+    },
+    "RU-AD": {
+    "iso_code": "RU-1",
+    "zoneName": "Adygea",
+    "countryName": "Russia"
+  },
+  "RU-AL": {
+    "iso_code": "RU-2",
+    "zoneName": "Altai Republic",
+    "countryName": "Russia"
+  },
+  "RU-ALT": {
+    "iso_code": "RU-2",
+    "zoneName": "Altai Krai",
+    "countryName": "Russia"
+  },
+  "RU-AMU": {
+    "iso_code": "RU-AS",
+    "zoneName": "Amur Oblast",
+    "countryName": "Russia"
+  },
+  "RU-BA": {
+    "iso_code": "RU-1",
+    "zoneName": "Bashkortostan",
+    "countryName": "Russia"
+  },
+  "RU-BEL": {
+    "iso_code": "RU-1",
+    "zoneName": "Belgorod Oblast",
+    "countryName": "Russia"
+  },
+  "RU-BRY": {
+    "iso_code": "RU-1",
+    "zoneName": "Bryansk Oblast",
+    "countryName": "Russia"
+  },
+  "RU-BU": {
+    "iso_code": "RU-2",
+    "zoneName": "Buryatia",
+    "countryName": "Russia"
+  },
+  "RU-CHE": {
+    "iso_code": "RU-1",
+    "zoneName": "Chechnya",
+    "countryName": "Russia"
+  },
+  "RU-CU": {
+    "iso_code": "RU-1",
+    "zoneName": "Chuvash Republic",
+    "countryName": "Russia"
+  },
+  "RU-DA": {
+    "iso_code": "RU-1",
+    "zoneName": "Dagestan",
+    "countryName": "Russia"
+  },
+  "RU-IN": {
+    "iso_code": "RU-1",
+    "zoneName": "Ingushetia",
+    "countryName": "Russia"
+  },
+  "RU-IRK": {
+    "iso_code": "RU-2",
+    "zoneName": "Irkutsk Oblast",
+    "countryName": "Russia"
+  },
+  "RU-IVA": {
+    "iso_code": "RU-1",
+    "zoneName": "Ivanovo Oblast",
+    "countryName": "Russia"
+  },
+  "RU-KB": {
+    "iso_code": "RU-1",
+    "zoneName": "Kabardino-Balkaria",
+    "countryName": "Russia"
+  },
+  "RU-KC": {
+    "iso_code": "RU-1",
+    "zoneName": "Karachay-Cherkessia",
+    "countryName": "Russia"
+  },
+  "RU-KDA": {
+    "iso_code": "RU-1",
+    "zoneName": "Krasnodar Krai",
+    "countryName": "Russia"
+  },
+  "RU-KEM": {
+    "iso_code": "RU-2",
+    "zoneName": "Kemerovo Oblast",
+    "countryName": "Russia"
+  },
+  "RU-KGD": {
+    "iso_code": "RU-1",
+    "zoneName": "Kaliningrad Oblast",
+    "countryName": "Russia"
+  },
+  "RU-KGN": {
+    "iso_code": "RU-1",
+    "zoneName": "Kurgan Oblast",
+    "countryName": "Russia"
+  },
+  "RU-KHA": {
+    "iso_code": "RU-AS",
+    "zoneName": "Khabarovsk Krai",
+    "countryName": "Russia"
+  },
+  "RU-KHM": {
+    "iso_code": "RU-2",
+    "zoneName": "Khanty-Mansi Autonomous Okrug",
+    "countryName": "Russia"
+  },
+  "RU-KIR": {
+    "iso_code": "RU-1",
+    "zoneName": "Kirov Oblast",
+    "countryName": "Russia"
+  },
+  "RU-KLU": {
+    "iso_code": "RU-1",
+    "zoneName": "Kaluga Oblast",
+    "countryName": "Russia"
+  },
+  "RU-KO": {
+    "iso_code": "RU-1",
+    "zoneName": "Komi Republic",
+    "countryName": "Russia"
+  },
+  "RU-KOS": {
+    "iso_code": "RU-1",
+    "zoneName": "Kostroma Oblast",
+    "countryName": "Russia"
+  },
+  "RU-KR": {
+    "iso_code": "RU-1",
+    "zoneName": "Karelia",
+    "countryName": "Russia"
+  },
+  "RU-KYA": {
+    "iso_code": "RU-2",
+    "zoneName": "Krasnoyarsk Krai",
+    "countryName": "Russia"
+  },
+  "RU-LEN": {
+    "iso_code": "RU-1",
+    "zoneName": "Leningrad Oblast",
+    "countryName": "Russia"
+  },
+  "RU-LIP": {
+    "iso_code": "RU-1",
+    "zoneName": "Lipetsk Oblast",
+    "countryName": "Russia"
+  },
+  "RU-ME": {
+    "iso_code": "RU-1",
+    "zoneName": "Mari El Republic",
+    "countryName": "Russia"
+  },
+  "RU-MO": {
+    "iso_code": "RU-1",
+    "zoneName": "Mordovia",
+    "countryName": "Russia"
+  },
+  "RU-MOS": {
+    "iso_code": "RU-1",
+    "zoneName": "Moscow Oblast",
+    "countryName": "Russia"
+  },
+  "RU-MOW": {
+    "iso_code": "RU-1",
+    "zoneName": "Moscow City",
+    "countryName": "Russia"
+  },
+  "RU-MUR": {
+    "iso_code": "RU-1",
+    "zoneName": "Murmansk Oblast",
+    "countryName": "Russia"
+  },
+  "RU-NIZ": {
+    "iso_code": "RU-1",
+    "zoneName": "Nizhny Novgorod Oblast",
+    "countryName": "Russia"
+  },
+  "RU-NVS": {
+    "iso_code": "RU-2",
+    "zoneName": "Novosibirsk Oblast",
+    "countryName": "Russia"
+  },
+  "RU-OMS": {
+    "iso_code": "RU-2",
+    "zoneName": "Omsk Oblast",
+    "countryName": "Russia"
+  },
+  "RU-ORE": {
+    "iso_code": "RU-1",
+    "zoneName": "Orenburg Oblast",
+    "countryName": "Russia"
+  },
+  "RU-ORL": {
+    "iso_code": "RU-1",
+    "zoneName": "Oryol Oblast",
+    "countryName": "Russia"
+  },
+  "RU-PER": {
+    "iso_code": "RU-1",
+    "zoneName": "Perm Krai",
+    "countryName": "Russia"
+  },
+  "RU-PNZ": {
+    "iso_code": "RU-1",
+    "zoneName": "Penza Oblast",
+    "countryName": "Russia"
+  },
+  "RU-PRI": {
+    "iso_code": "RU-AS",
+    "zoneName": "Primorsky Krai",
+    "countryName": "Russia"
+  },
+  "RU-PSK": {
+    "iso_code": "RU-1",
+    "zoneName": "Pskov Oblast",
+    "countryName": "Russia"
+  },
+  "RU-ROS": {
+    "iso_code": "RU-1",
+    "zoneName": "Rostov Oblast",
+    "countryName": "Russia"
+  },
+  "RU-RYA": {
+    "iso_code": "RU-1",
+    "zoneName": "Ryazan Oblast",
+    "countryName": "Russia"
+  },
+  "RU-SA": {
+    "iso_code": "RU-1",
+    "zoneName": "Sakha (Yakutia) Republic",
+    "countryName": "Russia"
+  },
+  "RU-SAK": {
+    "iso_code": "RU-AS",
+    "zoneName": "Sakhalin Oblast",
+    "countryName": "Russia"
+  },
+  "RU-SAM": {
+    "iso_code": "RU-1",
+    "zoneName": "Samara Oblast",
+    "countryName": "Russia"
+  },
+  "RU-SAR": {
+    "iso_code": "RU-1",
+    "zoneName": "Saratov Oblast",
+    "countryName": "Russia"
+  },
+  "RU-SE": {
+    "iso_code": "RU-1",
+    "zoneName": "North Ossetia-Alania",
+    "countryName": "Russia"
+  },
+  "RU-SMO": {
+    "iso_code": "RU-1",
+    "zoneName": "Smolensk Oblast",
+    "countryName": "Russia"
+  },
+  "RU-SPE": {
+    "iso_code": "RU-1",
+    "zoneName": "Saint Petersburg",
+    "countryName": "Russia"
+  },
+  "RU-STA": {
+    "iso_code": "RU-1",
+    "zoneName": "Stavropol Krai",
+    "countryName": "Russia"
+  },
+  "RU-SVE": {
+    "iso_code": "RU-2",
+    "zoneName": "Sverdlovsk Oblast",
+    "countryName": "Russia"
+  },
+  "RU-TA": {
+    "iso_code": "RU-1",
+    "zoneName": "Tatarstan",
+    "countryName": "Russia"
+  },
+  "RU-TAM": {
+    "iso_code": "RU-1",
+    "zoneName": "Tambov Oblast",
+    "countryName": "Russia"
+  },
+  "RU-TOM": {
+    "iso_code": "RU-2",
+    "zoneName": "Tomsk Oblast",
+    "countryName": "Russia"
+  },
+  "RU-TUL": {
+    "iso_code": "RU-1",
+    "zoneName": "Tula Oblast",
+    "countryName": "Russia"
+  },
+  "RU-TVE": {
+    "iso_code": "RU-1",
+    "zoneName": "Tver Oblast",
+    "countryName": "Russia"
+  },
+  "RU-TYU": {
+    "iso_code": "RU-2",
+    "zoneName": "Tyumen Oblast",
+    "countryName": "Russia"
+  },
+  "RU-UD": {
+    "iso_code": "RU-1",
+    "zoneName": "Udmurt Republic",
+    "countryName": "Russia"
+  },
+  "RU-ULY": {
+    "iso_code": "RU-1",
+    "zoneName": "Ulyanovsk Oblast",
+    "countryName": "Russia"
+  },
+  "RU-VGG": {
+    "iso_code": "RU-1",
+    "zoneName": "Volgograd Oblast",
+    "countryName": "Russia"
+  },
+  "RU-VLA": {
+    "iso_code": "RU-1",
+    "zoneName": "Vladimir Oblast",
+    "countryName": "Russia"
+  },
+  "RU-VLG": {
+    "iso_code": "RU-1",
+    "zoneName": "Vologda Oblast",
+    "countryName": "Russia"
+  },
+  "RU-VOR": {
+    "iso_code": "RU-1",
+    "zoneName": "Voronezh Oblast",
+    "countryName": "Russia"
+  },
+  "RU-YAN": {
+    "iso_code": "RU-2",
+    "zoneName": "Yamalo-Nenets Autonomous Okrug",
+    "countryName": "Russia"
+  },
+  "RU-YAR": {
+    "iso_code": "RU-1",
+    "zoneName": "Yaroslavl Oblast",
+    "countryName": "Russia"
+  },
+  "RU-ZAB": {
+    "iso_code": "RU-2",
+    "zoneName": "Zabaykalsky Krai",
+    "countryName": "Russia"
+  },
+    "RW": {
+      "iso_code": "RW",
+      "zoneName": "Rwanda",
+      "countryName": ""
+    },
+    "SA": {
+      "iso_code": "SA",
+      "zoneName": "Saudi Arabia",
+      "countryName": ""
+    },
+    "SB": {
+      "iso_code": "SB",
+      "zoneName": "Solomon Islands",
+      "countryName": ""
+    },
+    "SC": {
+      "iso_code": "SC",
+      "zoneName": "Seychelles",
+      "countryName": ""
+    },
+    "SD": {
+      "iso_code": "SD",
+      "zoneName": "Sudan",
+      "countryName": ""
+    },
+    "SE": {
+      "iso_code": "SE",
+      "zoneName": "Sweden",
+      "countryName": ""
+    },
+    "SE-SE1": {
+      "iso_code": "SE-SE1",
+      "zoneName": "North Sweden",
+      "countryName": "Sweden"
+    },
+    "SE-SE2": {
+      "iso_code": "SE-SE2",
+      "zoneName": "North Central Sweden",
+      "countryName": "Sweden"
+    },
+    "SE-SE3": {
+      "iso_code": "SE-SE3",
+      "zoneName": "South Central Sweden",
+      "countryName": "Sweden"
+    },
+    "SE-SE4": {
+      "iso_code": "SE-SE4",
+      "zoneName": "South Sweden",
+      "countryName": "Sweden"
+    },
+    "SG": {
+      "iso_code": "SG",
+      "zoneName": "Singapore",
+      "countryName": ""
+    },
+    "SI": {
+      "iso_code": "SI",
+      "zoneName": "Slovenia",
+      "countryName": ""
+    },
+    "SJ": {
+      "iso_code": "SJ",
+      "zoneName": "Svalbard and Jan Mayen",
+      "countryName": ""
+    },
+    "SK": {
+      "iso_code": "SK",
+      "zoneName": "Slovakia",
+      "countryName": ""
+    },
+    "SL": {
+      "iso_code": "SL",
+      "zoneName": "Sierra Leone",
+      "countryName": ""
+    },
+    "SN": {
+      "iso_code": "SN",
+      "zoneName": "Senegal",
+      "countryName": ""
+    },
+    "SO": {
+      "iso_code": "SO",
+      "zoneName": "Somalia",
+      "countryName": ""
+    },
+    "SR": {
+      "iso_code": "SR",
+      "zoneName": "Suriname",
+      "countryName": ""
+    },
+    "SS": {
+      "iso_code": "SS",
+      "zoneName": "South Sudan",
+      "countryName": ""
+    },
+    "ST": {
+      "iso_code": "ST",
+      "zoneName": "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+      "countryName": ""
+    },
+    "SV": {
+      "iso_code": "SV",
+      "zoneName": "El Salvador",
+      "countryName": ""
+    },
+    "SY": {
+      "iso_code": "SY",
+      "zoneName": "Syria",
+      "countryName": ""
+    },
+    "SZ": {
+      "iso_code": "SZ",
+      "zoneName": "Eswatini",
+      "countryName": ""
+    },
+    "TD": {
+      "iso_code": "TD",
+      "zoneName": "Chad",
+      "countryName": ""
+    },
+    "TF": {
+      "iso_code": "TF",
+      "zoneName": "French Southern Territories",
+      "countryName": ""
+    },
+    "TG": {
+      "iso_code": "TG",
+      "zoneName": "Togo",
+      "countryName": ""
+    },
+    "TH": {
+      "iso_code": "TH",
+      "zoneName": "Thailand",
+      "countryName": ""
+    },
+    "TJ": {
+      "iso_code": "TJ",
+      "zoneName": "Tajikistan",
+      "countryName": ""
+    },
+    "TL": {
+      "iso_code": "TL",
+      "zoneName": "Timor-Leste",
+      "countryName": ""
+    },
+    "TM": {
+      "iso_code": "TM",
+      "zoneName": "Turkmenistan",
+      "countryName": ""
+    },
+    "TN": {
+      "iso_code": "TN",
+      "zoneName": "Tunisia",
+      "countryName": ""
+    },
+    "TO": {
+      "iso_code": "TO",
+      "zoneName": "Tonga",
+      "countryName": ""
+    },
+    "TR": {
+      "iso_code": "TR",
+      "zoneName": "Turkey",
+      "countryName": ""
+    },
+    "TT": {
+      "iso_code": "TT",
+      "zoneName": "Trinidad and Tobago",
+      "countryName": ""
+    },
+    "TW": {
+      "iso_code": "TW",
+      "zoneName": "Taiwan",
+      "countryName": ""
+    },
+    "TZ": {
+      "iso_code": "TZ",
+      "zoneName": "Tanzania",
+      "countryName": ""
+    },
+    "UA": {
+      "iso_code": "UA",
+      "zoneName": "Ukraine",
+      "countryName": ""
+    },
+    "UA-CR": {
+      "iso_code": "UA-CR",
+      "zoneName": "Crimea",
+      "countryName": "Ukraine"
+    },
+    "UG": {
+      "iso_code": "UG",
+      "zoneName": "Uganda",
+      "countryName": ""
+    },
+    "US": {
+      "iso_code": "US",
+      "zoneName": "United States",
+      "countryName": ""
+    },
+    "US-AL": {
+    "iso_code": "US-SE-SOCO",
+    "zoneName": "AL",
+    "countryName": "USA"
+    },
+    "US-AK": {
+      "iso_code": "US-AK",
+      "zoneName": "AK",
+      "countryName": "USA"
+    },
+    "US-AZ": {
+      "iso_code": "US-SW-AZPS",
+      "zoneName": "AZ",
+      "countryName": "USA"
+    },
+    "US-AR": {
+      "iso_code": "US-MIDW-MISO",
+      "zoneName": "AR",
+      "countryName": "USA"
+    },
+    "US-CA": {
+      "iso_code": "US-CAL-CISO",
+      "zoneName": "CA",
+      "countryName": "USA"
+    },
+    "US-CO": {
+      "iso_code": "US-NW-WAPA",
+      "zoneName": "CO",
+      "countryName": "USA"
+    },
+    "US-CT": {
+      "iso_code": "US-NE-ISNE",
+      "zoneName": "CT",
+      "countryName": "USA"
+    },
+    "US-DE": {
+      "iso_code": "US-MIDA-PJM",
+      "zoneName": "DE",
+      "countryName": "USA"
+    },
+    "US-FL": {
+      "iso_code": "US-FLA-FPL",
+      "zoneName": "FL",
+      "countryName": "USA"
+    },
+    "US-GA": {
+      "iso_code": "US-SE-SOCO",
+      "zoneName": "GA",
+      "countryName": "USA"
+    },
+    "US-HI": {
+      "iso_code": "US-HI",
+      "zoneName": "HI",
+      "countryName": "USA"
+    },
+    "US-ID": {
+      "iso_code": "US-NW-IPCO",
+      "zoneName": "ID",
+      "countryName": "USA"
+    },
+    "US-IL": {
+      "iso_code": "US-MIDW-MISO",
+      "zoneName": "IL",
+      "countryName": "USA"
+    },
+    "US-IN": {
+      "iso_code": "US-MIDW-MISO",
+      "zoneName": "IN",
+      "countryName": "USA"
+    },
+    "US-IA": {
+      "iso_code": "US-MIDW-MISO",
+      "zoneName": "IA",
+      "countryName": "USA"
+    },
+    "US-KS": {
+      "iso_code": "US-CENT-SWPP",
+      "zoneName": "KS",
+      "countryName": "USA"
+    },
+    "US-KY": {
+      "iso_code": "US-MIDA-PJM",
+      "zoneName": "KY",
+      "countryName": "USA"
+    },
+    "US-LA": {
+      "iso_code": "US-MIDW-MISO",
+      "zoneName": "LA",
+      "countryName": "USA"
+    },
+    "US-ME": {
+      "iso_code": "US-NE-ISNE",
+      "zoneName": "ME",
+      "countryName": "USA"
+    },
+    "US-MD": {
+      "iso_code": "US-MIDA-PJM",
+      "zoneName": "MD",
+      "countryName": "USA"
+    },
+    "US-MA": {
+      "iso_code": "US-NE-ISNE",
+      "zoneName": "MA",
+      "countryName": "USA"
+    },
+    "US-MI": {
+      "iso_code": "US-MIDW-MISO",
+      "zoneName": "MI",
+      "countryName": "USA"
+    },
+    "US-MN": {
+      "iso_code": "US-MIDW-MISO",
+      "zoneName": "MN",
+      "countryName": "USA"
+    },
+    "US-MS": {
+      "iso_code": "US-SE-SOCO",
+      "zoneName": "MS",
+      "countryName": "USA"
+    },
+    "US-MO": {
+      "iso_code": "US-MIDW-AECI",
+      "zoneName": "MO",
+      "countryName": "USA"
+    },
+    "US-MT": {
+      "iso_code": "US-NW-NWMT",
+      "zoneName": "MT",
+      "countryName": "USA"
+    },
+    "US-NE": {
+      "iso_code": "US-CENT-SWPP",
+      "zoneName": "NE",
+      "countryName": "USA"
+    },
+    "US-NV": {
+      "iso_code": "US-NW-NEVP",
+      "zoneName": "NV",
+      "countryName": "USA"
+    },
+    "US-NH": {
+      "iso_code": "US-NE-ISNE",
+      "zoneName": "NH",
+      "countryName": "USA"
+    },
+    "US-NJ": {
+      "iso_code": "US-MIDA-PJM",
+      "zoneName": "NJ",
+      "countryName": "USA"
+    },
+    "US-NM": {
+      "iso_code": "US-SW-PNM",
+      "zoneName": "NM",
+      "countryName": "USA"
+    },
+    "US-NY": {
+      "iso_code": "US-NY-NYIS",
+      "zoneName": "NY",
+      "countryName": "USA"
+    },
+    "US-NC": {
+      "iso_code": "US-CAR-DUK",
+      "zoneName": "NC",
+      "countryName": "USA"
+    },
+    "US-ND": {
+      "iso_code": "US-CENT-SWPP",
+      "zoneName": "ND",
+      "countryName": "USA"
+    },
+    "US-OH": {
+      "iso_code": "US-MIDA-PJM",
+      "zoneName": "OH",
+      "countryName": "USA"
+    },
+    "US-OK": {
+      "iso_code": "US-CENT-SWPP",
+      "zoneName": "OK",
+      "countryName": "USA"
+    },
+    "US-OR": {
+      "iso_code": "US-NW-PACW",
+      "zoneName": "OR",
+      "countryName": "USA"
+    },
+    "US-PA": {
+      "iso_code": "US-MIDA-PJM",
+      "zoneName": "PA",
+      "countryName": "USA"
+    },
+    "US-RI": {
+      "iso_code": "US-NE-ISNE",
+      "zoneName": "RI",
+      "countryName": "USA"
+    },
+    "US-SC": {
+      "iso_code": "US-CAR-SC",
+      "zoneName": "SC",
+      "countryName": "USA"
+    },
+    "US-SD": {
+      "iso_code": "US-NW-WACM",
+      "zoneName": "SD",
+      "countryName": "USA"
+    },
+    "US-TN": {
+      "iso_code": "US-TEN-TVA",
+      "zoneName": "TN",
+      "countryName": "USA"
+    },
+    "US-TX": {
+      "iso_code": "US-TEX-ERCO",
+      "zoneName": "TX",
+      "countryName": "USA"
+    },
+    "US-UT": {
+      "iso_code": "US-NW-PACE",
+      "zoneName": "UT",
+      "countryName": "USA"
+    },
+    "US-VT": {
+      "iso_code": "US-NE-ISNE",
+      "zoneName": "VT",
+      "countryName": "USA"
+    },
+    "US-VA": {
+      "iso_code": "US-MIDA-PJM",
+      "zoneName": "VA",
+      "countryName": "USA"
+    },
+    "US-WA": {
+      "iso_code": "US-NW-SCL",
+      "zoneName": "WA",
+      "countryName": "USA"
+    },
+    "US-WV": {
+      "iso_code": "US-MIDA-PJM",
+      "zoneName": "WV",
+      "countryName": "USA"
+    },
+    "US-WI": {
+      "iso_code": "US-MIDW-MISO",
+      "zoneName": "WI",
+      "countryName": "USA"
+    },
+    "US-WY": {
+      "iso_code": "US-NW-PACE",
+      "zoneName": "WY",
+      "countryName": "USA"
+    },
+    "UY": {
+      "iso_code": "UY",
+      "zoneName": "Uruguay",
+      "countryName": ""
+    },
+    "UZ": {
+      "iso_code": "UZ",
+      "zoneName": "Uzbekistan",
+      "countryName": ""
+    },
+    "VC": {
+      "iso_code": "VC",
+      "zoneName": "Saint Vincent and the Grenadines",
+      "countryName": ""
+    },
+    "VE": {
+      "iso_code": "VE",
+      "zoneName": "Venezuela",
+      "countryName": ""
+    },
+    "VI": {
+      "iso_code": "VI",
+      "zoneName": "Virgin Islands",
+      "countryName": "USA"
+    },
+    "VN": {
+      "iso_code": "VN",
+      "zoneName": "Vietnam",
+      "countryName": ""
+    },
+    "VU": {
+      "iso_code": "VU",
+      "zoneName": "Vanuatu",
+      "countryName": ""
+    },
+    "WS": {
+      "iso_code": "WS",
+      "zoneName": "Samoa",
+      "countryName": ""
+    },
+    "XK": {
+      "iso_code": "XK",
+      "zoneName": "Kosovo",
+      "countryName": ""
+    },
+    "XX": {
+      "iso_code": "XX",
+      "zoneName": "Northern Cyprus",
+      "countryName": ""
+    },
+    "YE": {
+      "iso_code": "YE",
+      "zoneName": "Yemen",
+      "countryName": ""
+    },
+    "YT": {
+      "iso_code": "YT",
+      "zoneName": "Mayotte",
+      "countryName": ""
+    },
+    "ZA": {
+      "iso_code": "ZA",
+      "zoneName": "South Africa",
+      "countryName": ""
+    },
+    "ZM": {
+      "iso_code": "ZM",
+      "zoneName": "Zambia",
+      "countryName": ""
+    },
+    "ZW": {
+      "iso_code": "ZW",
+      "zoneName": "Zimbabwe",
+      "countryName": ""
+    }
+  }
+}

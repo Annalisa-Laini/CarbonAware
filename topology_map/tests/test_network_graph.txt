@@ -1,0 +1,194 @@
+import sys
+import os
+import unittest
+from unittest.mock import MagicMock
+
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.insert(0, project_root)
+from topology_map.networkx_graph import ASGraph
+
+class TestASGraph(unittest.TestCase):
+
+    def setUp(self):
+        # Initialize ASGraph with necessary parameters, no need for file reading if load_data is False
+        iso_path = os.path.join(os.path.dirname(__file__), "iso.json")
+        self.as_graph = ASGraph(
+            data_file='mock_data.json',    # Skip the actual file loading for simplicity
+            relationships_file='mock_relationships.txt',
+            countries="mock_countries.txt",
+            iso_mapping_file =iso_path,
+            load_data=False  # Skip loading from file
+        )
+        iso_path = os.path.join(project_root, "iso.json")
+        # Mock a simple example of node and edge addition for testing purpose
+        self.as_graph.graph.add_nodes_from([ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'X', 'Z', '35792', '5588', '51717',
+                                             '2134', '3352', '13195', '2914', '1764', '5403', '3190' ])
+
+        self.as_graph.graph.add_edge('A','B', relationship="p2c")
+        self.as_graph.graph.add_edge('A','C', relationship="p2c")
+        self.as_graph.graph.add_edge('Y','C', relationship="p2c")
+        self.as_graph.graph.add_edge('A','Y', relationship="s2s")
+        self.as_graph.graph.add_edge('Y','A', relationship="s2s")
+        self.as_graph.graph.add_edge('A','G', relationship="p2c")
+        self.as_graph.graph.add_edge('G','A', relationship="c2p")
+        self.as_graph.graph.add_edge('B','Z', relationship="c2p")
+        self.as_graph.graph.add_edge('B','C', relationship="p2p")
+        self.as_graph.graph.add_edge('B','A', relationship="c2p")
+        self.as_graph.graph.add_edge('B','X', relationship="p2p")
+        self.as_graph.graph.add_edge('B','E', relationship="p2c")
+        self.as_graph.graph.add_edge('C','F', relationship="p2c")
+        self.as_graph.graph.add_edge('C','B', relationship="p2p")
+        self.as_graph.graph.add_edge('D','B', relationship="c2p")
+        self.as_graph.graph.add_edge('E','B', relationship="c2p")
+        self.as_graph.graph.add_edge('F','C', relationship="c2p")
+        self.as_graph.graph.add_edge('F','I', relationship="p2c")
+        self.as_graph.graph.add_edge('G','H', relationship="p2c")
+        self.as_graph.graph.add_edge('H','G', relationship="c2p")
+        self.as_graph.graph.add_edge('H','I', relationship="p2c")
+        self.as_graph.graph.add_edge('I','H', relationship="c2p")
+        self.as_graph.graph.add_edge('I','F', relationship="c2p")
+        self.as_graph.graph.add_edge('Z','B', relationship="p2c")
+        
+        self.as_graph.graph.add_edge('35792', '5588', relationship="c2p")
+        self.as_graph.graph.add_edge('5588', '51717', relationship="p2c")
+        self.as_graph.graph.add_edge('2134', '3352', relationship="c2p")
+        self.as_graph.graph.add_edge('3352', '13195', relationship="p2c")
+        self.as_graph.graph.add_edge('2914', '1764', relationship="p2c")
+        self.as_graph.graph.add_edge('1764', '5403', relationship="p2c")
+        self.as_graph.graph.add_edge('5403', '3190', relationship="p2c")
+
+        # Emissions for find_all_valid_shortest_path function with Dijkstra's
+        # Mock AS-to-country mapping
+        self.as_graph.as_to_country = {
+            'A': "France",
+            'B': "Germany",
+            'C': "Spain",
+            'D': "Netherlands",
+            'E': "Italy"
+        }
+
+        # Define different emissions for each country
+        emissions_data = {
+            "France": 100,
+            "Germany": 300,
+            "Spain": 250,
+            "Netherlands": 150,
+            "Italy": 380
+        }
+        self.as_graph.get_emissions_for_country = MagicMock(side_effect=lambda country, dt: emissions_data.get(country, 0.0))
+        
+    def test_is_path_valid_1(self):
+        path = ['35792', '5588', '51717']  # c2p, p2c
+        # print(f"Testing path: {path}")
+        result = self.as_graph.is_valid_path(path)
+        print(f"Is the path valid? {result}")
+        self.assertTrue(result)  
+
+    def test_is_path_valid_2(self):
+        path = ['2134', '3352', '13195']
+        # print(f"Testing path: {path}")
+        result = self.as_graph.is_valid_path(path)
+        print(f"Is the path valid? {result}")
+        self.assertTrue(result) 
+
+    def test_is_path_valid_4(self): 
+        # Invalid path test (no edge from 8426 to 5483)
+        path = ['2134', '3352', '8426', '5483']
+        # print(f"Testing path: {path}")
+        result = self.as_graph.is_valid_path(path)
+        self.assertFalse(result)  # We expect this path to be invalid
+        print(f"Ok if False, is: {result}")
+
+    def test_is_path_valid_5(self):
+        path=['2914', '1764', '5403', '3190'] # all p2c relations
+        #print(f"Testing path: {path}")
+        result = self.as_graph.is_valid_path(path)
+        self.assertTrue(result) 
+        print(f"Is the path valid? {result}")
+
+# CAIDA examples
+
+    def test_is_path_valid_ex4(self):
+        path=['F', 'C', 'B','Z']  # example 4
+        # print(f"Testing path: {path}")
+        result = self.as_graph.is_valid_path(path)
+        print(f"Ok if False, is: {result}")
+        self.assertFalse(result) 
+    
+    def test_is_path_valid_ex3(self):
+        path=['Z', 'B', 'A']  # example 3
+        # print(f"Testing path: {path}")
+        result = self.as_graph.is_valid_path(path)
+        print(f"Ok if False, is: {result}")
+        self.assertFalse(result) 
+
+    def test_is_path_valid_ex2(self):
+        path=['D', 'B', 'C', 'F'] # example 2
+        # print(f"Testing path: {path}")
+        result = self.as_graph.is_valid_path(path)
+        print(f"Is the path valid? {result}")
+        self.assertTrue(result) 
+
+    def test_is_path_valid_ex1(self):
+        path=['D', 'B', 'A', 'Y', 'C', 'F'] # example 1
+        # print(f"Testing path: {path}")
+        result = self.as_graph.is_valid_path(path)
+        print(f"Is the path valid? {result}")
+        self.assertTrue(result) 
+    
+    # path of length one p2c
+    def test_is_path_valid_len1(self):
+        path=['C', 'F'] 
+        # print(f"Testing path: {path}")
+        result = self.as_graph.is_valid_path(path)
+        print(f"Is the path valid? {result}")
+        self.assertTrue(result) 
+    
+    # path of length one p2p
+    def test_is_path_valid_len2(self):
+        path=['C', 'B'] 
+        # print(f"Testing path: {path}")
+        result = self.as_graph.is_valid_path(path)
+        print(f"Is the path valid? {result}")
+        self.assertTrue(result) 
+
+
+    # path with 2 p2p
+    def test_is_path_valid_len2(self):
+        path=['C', 'B', 'X'] 
+        # print(f"Testing path: {path}")
+        result = self.as_graph.is_valid_path(path)
+        print(f"Ok if False, is: {result}")
+        self.assertFalse(result) 
+
+    def test_add_emission_data(self):
+        specific_datetime = "2023-01-01 23:00:00"        
+        self.as_graph.add_emission_data(specific_datetime)
+
+    # shortest path based on emissions        
+    def test_shortest_path_based_on_emissions(self):
+        # Assign emissions as node attributes
+        emissions_data = {
+            'A':40 , 'B': 10, 'C': 60, 'D': 10,  'F': 30, 'G': 10 , 'H': 50, 'I':10       }
+        # ALTERNATIVE TEST:  'A':50 , 'B': 10, 'C': 60, 'D': 10,  'F': 30, 'G': 10 , 'H': 90, 'I':30  
+        for node, emission in emissions_data.items():
+            self.as_graph.graph.nodes[node]['emissions'] = emission
+
+        #weight_func = lambda node: self.as_graph.graph.nodes[node].get('emissions', float('inf'))
+        valid_paths = self.as_graph.find_all_valid_shortest_paths('D')
+
+        for dest, path in valid_paths.items():
+            total_emission = sum(self.as_graph.graph.nodes[n].get('emissions', 0) for n in path)
+
+        expected_path = ['D', 'B', 'C', 'F', 'I']  # ALTERNATIVE TEST: ['D', 'B', 'C', 'F', 'I']
+        self.assertEqual(valid_paths.get('I'), expected_path, f"Incorrect lowest emission path to F")
+
+            
+if __name__ == "__main__":
+    unittest.main()
+
+'''
+for i in range(len(path) - 1):
+            edge_data = self.as_graph.graph.get_edge_data(path[i], path[i+1])
+            print(f"Edge {path[i]} -> {path[i+1]}: {edge_data}")
+'''
